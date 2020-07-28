@@ -291,6 +291,9 @@
                                 <state key="normal" title="展示を見る">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Lph-jn-fwt" kind="show" id="XtC-tx-pzF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rX6-Xm-yFj">
                                 <rect key="frame" x="124" y="289" width="127" height="42"/>
@@ -299,6 +302,9 @@
                                 <state key="normal" title="マイページ">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="gvm-UU-PeH" kind="show" id="riM-qH-osp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y06-cO-jvw">
                                 <rect key="frame" x="124" y="123" width="127" height="42"/>
@@ -350,11 +356,73 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Bh-py-nl3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5424" y="100"/>
+            <point key="canvasLocation" x="5474" y="-313"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MV3-Z8-42v">
+            <objects>
+                <viewController id="gvm-UU-PeH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QfI-QU-3nq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ui-d3-Cgp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="マイページ" id="nVb-Gm-UyI">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="4h4-lH-gu2">
+                                            <connections>
+                                                <segue destination="42p-En-TGa" kind="show" id="Nnj-4C-LbW"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="SrR-ho-OPO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vb9-ap-rpr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9nc-b6-4iQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4690" y="860"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rVJ-xH-mrJ">
+            <objects>
+                <viewController id="Lph-jn-fwt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mb5-DN-QdO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ukL-zu-aS1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="展示一覧" id="qOT-Cy-HUC">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="Guj-qh-b9r">
+                                            <connections>
+                                                <segue destination="42p-En-TGa" kind="show" id="YnF-PB-At3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="bJc-Xk-jTp"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6YQ-YT-5Dm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YO4-4k-inM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5495" y="440"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eDh-ho-lCi"/>
+        <segue reference="Nnj-4C-LbW"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="intro" width="590.5" height="212"/>
