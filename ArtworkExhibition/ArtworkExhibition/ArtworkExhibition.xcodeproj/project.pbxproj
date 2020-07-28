@@ -17,6 +17,9 @@
 		3C115ED524A9808700F8D606 /* ArtworkExhibitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C115ED424A9808700F8D606 /* ArtworkExhibitionTests.swift */; };
 		3C115EE024A9808700F8D606 /* ArtworkExhibitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C115EDF24A9808700F8D606 /* ArtworkExhibitionUITests.swift */; };
 		3C115EF024A98A2C00F8D606 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C115EEF24A98A2C00F8D606 /* IntroViewController.swift */; };
+		3C15F1C124CFE07A00FA3B5F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C15F1C024CFE07A00FA3B5F /* HomeViewController.swift */; };
+		3CF4858D24CFE96E00218597 /* CALayer+RuntimeAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF4858C24CFE96E00218597 /* CALayer+RuntimeAttribute.swift */; };
+		3CF4858F24CFEA9900218597 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF4858E24CFEA9900218597 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		3C115EDF24A9808700F8D606 /* ArtworkExhibitionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkExhibitionUITests.swift; sourceTree = "<group>"; };
 		3C115EE124A9808700F8D606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C115EEF24A98A2C00F8D606 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		3C15F1C024CFE07A00FA3B5F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3CF4858C24CFE96E00218597 /* CALayer+RuntimeAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+RuntimeAttribute.swift"; sourceTree = "<group>"; };
+		3CF4858E24CFEA9900218597 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,11 +113,14 @@
 				3C115EBC24A9808600F8D606 /* SceneDelegate.swift */,
 				3C115EBE24A9808600F8D606 /* ViewController.swift */,
 				3C115EEF24A98A2C00F8D606 /* IntroViewController.swift */,
+				3C15F1C024CFE07A00FA3B5F /* HomeViewController.swift */,
 				3C115EC024A9808600F8D606 /* Main.storyboard */,
 				3C115EC624A9808700F8D606 /* Assets.xcassets */,
 				3C115EC824A9808700F8D606 /* LaunchScreen.storyboard */,
 				3C115ECB24A9808700F8D606 /* Info.plist */,
 				3C115EC324A9808600F8D606 /* ArtworkExhibition.xcdatamodeld */,
+				3CF4858C24CFE96E00218597 /* CALayer+RuntimeAttribute.swift */,
+				3CF4858E24CFEA9900218597 /* CustomButton.swift */,
 			);
 			path = ArtworkExhibition;
 			sourceTree = "<group>";
@@ -265,11 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CF4858D24CFE96E00218597 /* CALayer+RuntimeAttribute.swift in Sources */,
 				3C115EF024A98A2C00F8D606 /* IntroViewController.swift in Sources */,
 				3C115EBF24A9808600F8D606 /* ViewController.swift in Sources */,
 				3C115EBB24A9808600F8D606 /* AppDelegate.swift in Sources */,
+				3CF4858F24CFEA9900218597 /* CustomButton.swift in Sources */,
 				3C115EBD24A9808600F8D606 /* SceneDelegate.swift in Sources */,
 				3C115EC524A9808600F8D606 /* ArtworkExhibition.xcdatamodeld in Sources */,
+				3C15F1C124CFE07A00FA3B5F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
