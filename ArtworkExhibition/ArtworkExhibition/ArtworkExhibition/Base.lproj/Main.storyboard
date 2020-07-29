@@ -424,7 +424,7 @@
                                 </items>
                             </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="explanation" translatesAutoresizingMaskIntoConstraints="NO" id="uLV-FP-oDp">
-                                <rect key="frame" x="17" y="73" width="340" height="550"/>
+                                <rect key="frame" x="29" y="74" width="317" height="533"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -445,31 +445,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wtf-lM-RXt">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ugP-yh-UFr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="作品画像を追加" id="hOp-Qn-Hd7">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="k3r-RP-ep5">
+                                    <navigationItem title="画像を追加" id="QHH-yo-abL">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="GYW-vE-fTe">
                                             <connections>
-                                                <segue destination="jiZ-6X-5sx" kind="show" id="mgV-gT-18y"/>
+                                                <segue destination="jiZ-6X-5sx" kind="show" id="9bQ-Gh-leX"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="次へ" id="cLp-94-vRs">
+                                        <barButtonItem key="rightBarButtonItem" title="次へ" id="hrL-HU-9TG">
                                             <connections>
-                                                <segue destination="A8L-L1-5Ys" kind="show" id="QT6-se-N3g"/>
+                                                <segue destination="A8L-L1-5Ys" kind="show" id="S3H-dx-0Nu"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udi-qL-p1j" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
-                                <rect key="frame" x="119" y="556" width="136" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Fcc-Gs-Nip"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arm-Yo-FBy" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                                <rect key="frame" x="128" y="554" width="119" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="次へ">
+                                <state key="normal" title="OK">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -479,12 +477,15 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="A8L-L1-5Ys" kind="show" id="Ox7-nH-oCH"/>
+                                    <segue destination="A8L-L1-5Ys" kind="show" id="IID-PC-S9L"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -495,7 +496,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLK-87-gn4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7732" y="-1820"/>
+            <point key="canvasLocation" x="7732" y="-1820.2398800599701"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6wX-NY-jaL">
@@ -505,13 +506,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kiy-5M-STT">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NVB-0V-4DY">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem id="v6X-rV-UJh">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="SvO-1z-6r7"/>
-                                        <barButtonItem key="rightBarButtonItem" title="次へ" id="f6Y-DL-KKw"/>
+                                    <navigationItem title="Title" id="Qmi-hY-jjH">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="YbN-d0-Cmm">
+                                            <connections>
+                                                <segue destination="hM9-WB-35o" kind="show" id="X1w-3w-caB"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="次へ" id="y96-NM-ysW"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -640,9 +645,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Lw3-JH-imR"/>
-        <segue reference="QT6-se-N3g"/>
-        <segue reference="mgV-gT-18y"/>
+        <segue reference="DmY-ge-3HO"/>
+        <segue reference="S3H-dx-0Nu"/>
+        <segue reference="X1w-3w-caB"/>
+        <segue reference="9bQ-Gh-leX"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="explanation" width="556.5" height="952"/>
