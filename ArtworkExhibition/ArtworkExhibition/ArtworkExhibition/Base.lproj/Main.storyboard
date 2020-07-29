@@ -86,13 +86,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ユーザ登録画面//後ほど実装" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNs-MR-vrq">
-                                <rect key="frame" x="51" y="58" width="219" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfl-lC-Riz" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="121" y="493" width="132" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -118,6 +111,13 @@
                                     <segue destination="95W-nd-Zia" kind="show" id="laD-ar-1SL"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ユーザ登録" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNs-MR-vrq">
+                                <rect key="frame" x="144" y="64" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xx3-31-FHH"/>
@@ -136,16 +136,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ユーザ登録OK画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDS-4O-QvS">
-                                <rect key="frame" x="57" y="57" width="145" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ixw-0Z-0Dc" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ixw-0Z-0Dc" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="112" y="499" width="151" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="cLb-xj-FKl"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="ログインする">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -165,8 +160,22 @@
                                     <segue destination="17b-0Y-LUt" kind="show" id="QeX-8W-Re8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ユーザ登録内容確認" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDS-4O-QvS">
+                                <rect key="frame" x="109" y="71" width="156" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wDS-4O-QvS" firstAttribute="centerX" secondItem="H9b-rO-VJe" secondAttribute="centerX" id="2LZ-4p-XZE"/>
+                            <constraint firstItem="wDS-4O-QvS" firstAttribute="top" secondItem="LTT-QX-6Cj" secondAttribute="top" constant="71" id="3rm-Hr-gD0"/>
+                            <constraint firstItem="LTT-QX-6Cj" firstAttribute="bottom" secondItem="Ixw-0Z-0Dc" secondAttribute="bottom" constant="107" id="4iO-g0-QPd"/>
+                            <constraint firstItem="wDS-4O-QvS" firstAttribute="centerX" secondItem="Ixw-0Z-0Dc" secondAttribute="centerX" id="VM8-k8-azi"/>
+                            <constraint firstItem="Ixw-0Z-0Dc" firstAttribute="leading" secondItem="LTT-QX-6Cj" secondAttribute="leading" constant="112" id="VrP-j2-J6v"/>
+                            <constraint firstItem="wDS-4O-QvS" firstAttribute="leading" secondItem="LTT-QX-6Cj" secondAttribute="leading" constant="109" id="xZG-ZH-FtV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LTT-QX-6Cj"/>
                     </view>
                     <navigationItem key="navigationItem" id="EZ0-sj-eyd"/>
@@ -183,16 +192,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ログイン画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXr-Rc-3jf">
-                                <rect key="frame" x="60" y="55" width="104" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWL-Ke-P4L" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWL-Ke-P4L" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="122" y="496" width="131" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="exF-oM-UmS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="ログイン">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -212,8 +216,22 @@
                                     <segue destination="ix4-JK-Vea" kind="show" id="yED-Dr-5Sm"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ログイン" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXr-Rc-3jf">
+                                <rect key="frame" x="152" y="73" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NXr-Rc-3jf" firstAttribute="leading" secondItem="rUs-ys-PJc" secondAttribute="leading" constant="152" id="I1l-Ft-QfG"/>
+                            <constraint firstItem="NXr-Rc-3jf" firstAttribute="centerX" secondItem="GWL-Ke-P4L" secondAttribute="centerX" id="TrJ-D8-ZzJ"/>
+                            <constraint firstItem="NXr-Rc-3jf" firstAttribute="centerX" secondItem="lEm-NT-Zrh" secondAttribute="centerX" id="eZl-oC-OBV"/>
+                            <constraint firstItem="GWL-Ke-P4L" firstAttribute="leading" secondItem="rUs-ys-PJc" secondAttribute="leading" constant="122" id="gUt-bJ-oYS"/>
+                            <constraint firstItem="NXr-Rc-3jf" firstAttribute="top" secondItem="rUs-ys-PJc" secondAttribute="top" constant="73" id="lbA-J4-zmD"/>
+                            <constraint firstItem="rUs-ys-PJc" firstAttribute="bottom" secondItem="GWL-Ke-P4L" secondAttribute="bottom" constant="108" id="oBb-ie-GF9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rUs-ys-PJc"/>
                     </view>
                     <navigationItem key="navigationItem" id="70U-83-cWC"/>
@@ -230,16 +248,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ログインOK画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHN-GT-yR7">
-                                <rect key="frame" x="66" y="77" width="128" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1l-fm-uEn" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1l-fm-uEn" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="119" y="499" width="136" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="U9w-oR-gpw"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="ようこそ">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -259,12 +272,31 @@
                                     <segue destination="Usm-9P-NM2" kind="show" id="Lw3-JH-imR"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="ENV-fm-Xoq">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="ENV-fm-Xoq">
                                 <rect key="frame" x="137" y="220" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="zxW-dQ-Mcj"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ログイン成功" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHN-GT-yR7">
+                                <rect key="frame" x="135" y="79" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SHN-GT-yR7" firstAttribute="centerX" secondItem="deG-h4-VCb" secondAttribute="centerX" id="AEA-JV-q4i"/>
+                            <constraint firstItem="ENV-fm-Xoq" firstAttribute="leading" secondItem="Dr6-vF-4bR" secondAttribute="leading" constant="137" id="Eot-oe-MmD"/>
+                            <constraint firstItem="Dr6-vF-4bR" firstAttribute="bottom" secondItem="n1l-fm-uEn" secondAttribute="bottom" constant="103" id="GTp-hS-4dM"/>
+                            <constraint firstItem="SHN-GT-yR7" firstAttribute="leading" secondItem="Dr6-vF-4bR" secondAttribute="leading" constant="135" id="VFF-8K-jBG"/>
+                            <constraint firstItem="ENV-fm-Xoq" firstAttribute="top" secondItem="deG-h4-VCb" secondAttribute="top" constant="220" id="Vh5-5F-3VD"/>
+                            <constraint firstItem="SHN-GT-yR7" firstAttribute="centerX" secondItem="ENV-fm-Xoq" secondAttribute="centerX" id="f66-Nk-ARp"/>
+                            <constraint firstItem="n1l-fm-uEn" firstAttribute="leading" secondItem="Dr6-vF-4bR" secondAttribute="leading" constant="119" id="fve-33-LBo"/>
+                            <constraint firstItem="ENV-fm-Xoq" firstAttribute="centerX" secondItem="n1l-fm-uEn" secondAttribute="centerX" id="hhf-Tn-Rk9"/>
+                            <constraint firstItem="SHN-GT-yR7" firstAttribute="top" secondItem="Dr6-vF-4bR" secondAttribute="top" constant="79" id="rIn-Dd-7VI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Dr6-vF-4bR"/>
                     </view>
                     <navigationItem key="navigationItem" id="EY0-a4-tox"/>
