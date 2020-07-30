@@ -29,6 +29,18 @@ class CustomButton: UIButton {
             layer.borderColor = borderColor.cgColor
         }
     }
+    @IBInspectable var highlightedBackgroundColor :UIColor?
+    @IBInspectable var nonHighlightedBackgroundColor :UIColor?
+    override var isHighlighted :Bool {
+            didSet {
+                if isHighlighted {
+                    self.backgroundColor = highlightedBackgroundColor
+                }
+                else {
+                    self.backgroundColor = nonHighlightedBackgroundColor
+                }
+            }
+        }
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
