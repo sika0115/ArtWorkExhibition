@@ -118,6 +118,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kr7-0a-Sp5">
+                                <rect key="frame" x="95" y="561" width="184" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="登録済みの方はこちら"/>
+                                <connections>
+                                    <segue destination="17b-0Y-LUt" kind="show" id="2ee-1d-fxI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xx3-31-FHH"/>
@@ -916,13 +925,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1Oz-mK-rVT"/>
+        <segue reference="DmY-ge-3HO"/>
         <segue reference="awk-kV-fiC"/>
         <segue reference="ULT-JD-h5R"/>
         <segue reference="kZH-rb-0Wi"/>
         <segue reference="AmO-SY-QsL"/>
-        <segue reference="X1w-3w-caB"/>
+        <segue reference="wii-FB-bQA"/>
         <segue reference="9bQ-Gh-leX"/>
+        <segue reference="2ee-1d-fxI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
