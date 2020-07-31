@@ -1232,7 +1232,7 @@
     <resources>
         <image name="explanation" width="556.5" height="952"/>
         <image name="house" catalog="system" width="128" height="110"/>
-        <image name="intro-text" width="1864" height="1002"/>
+        <image name="intro-text" width="932" height="501"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
         <image name="start" width="484" height="135.5"/>
         <image name="success" width="114" height="114"/>
