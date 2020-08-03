@@ -1226,11 +1226,11 @@
         <segue reference="kZH-rb-0Wi"/>
         <segue reference="AmO-SY-QsL"/>
         <segue reference="wii-FB-bQA"/>
-        <segue reference="9bQ-Gh-leX"/>
+        <segue reference="LkH-jH-fFx"/>
         <segue reference="Jf2-wA-UcY"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="explanation" width="556.5" height="952"/>
+        <image name="explanation" width="555" height="917"/>
         <image name="house" catalog="system" width="128" height="110"/>
         <image name="intro-text" width="932" height="501"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
