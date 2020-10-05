@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		3C115EE024A9808700F8D606 /* ArtworkExhibitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C115EDF24A9808700F8D606 /* ArtworkExhibitionUITests.swift */; };
 		3C115EF024A98A2C00F8D606 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C115EEF24A98A2C00F8D606 /* IntroViewController.swift */; };
 		3C15F1C124CFE07A00FA3B5F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C15F1C024CFE07A00FA3B5F /* HomeViewController.swift */; };
+		3C77C8D2252ABBAF00E4643B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C77C8D1252ABBAF00E4643B /* SignUpViewController.swift */; };
 		3CB95AB824DCECB10038034F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CB95AB724DCECB10038034F /* GoogleService-Info.plist */; };
 		3CB95AB924DCECB10038034F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CB95AB724DCECB10038034F /* GoogleService-Info.plist */; };
 		3CB95ABA24DCECB10038034F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CB95AB724DCECB10038034F /* GoogleService-Info.plist */; };
@@ -66,6 +67,7 @@
 		3C115EE124A9808700F8D606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C115EEF24A98A2C00F8D606 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		3C15F1C024CFE07A00FA3B5F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3C77C8D1252ABBAF00E4643B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3CB95AB724DCECB10038034F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3CF4858C24CFE96E00218597 /* CALayer+RuntimeAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+RuntimeAttribute.swift"; sourceTree = "<group>"; };
 		3CF4858E24CFEA9900218597 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -115,7 +117,6 @@
 				69D711717359D41DAC400E2F /* Pods-ArtworkExhibitionTests.debug.xcconfig */,
 				9A369C143C19413EDDA6B892 /* Pods-ArtworkExhibitionTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -157,6 +158,7 @@
 				3C115EC324A9808600F8D606 /* ArtworkExhibition.xcdatamodeld */,
 				3CF4858C24CFE96E00218597 /* CALayer+RuntimeAttribute.swift */,
 				3CF4858E24CFEA9900218597 /* CustomButton.swift */,
+				3C77C8D1252ABBAF00E4643B /* SignUpViewController.swift */,
 			);
 			path = ArtworkExhibition;
 			sourceTree = "<group>";
@@ -473,6 +475,7 @@
 				3C115EBB24A9808600F8D606 /* AppDelegate.swift in Sources */,
 				3CF4858F24CFEA9900218597 /* CustomButton.swift in Sources */,
 				3C115EBD24A9808600F8D606 /* SceneDelegate.swift in Sources */,
+				3C77C8D2252ABBAF00E4643B /* SignUpViewController.swift in Sources */,
 				3C115EC524A9808600F8D606 /* ArtworkExhibition.xcdatamodeld in Sources */,
 				3C15F1C124CFE07A00FA3B5F /* HomeViewController.swift in Sources */,
 			);
