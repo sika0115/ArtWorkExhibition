@@ -239,7 +239,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="EZ0-sj-eyd"/>
                     <connections>
-                        <segue destination="ix4-JK-Vea" kind="show" identifier="toSend" id="o55-O4-qSB"/>
+                        <segue destination="ix4-JK-Vea" kind="presentation" identifier="GoOK" id="Itf-46-ihN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CLu-ph-SZB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
