@@ -50,7 +50,7 @@ class SignUpViewController: UIViewController {
     }
   
     private func showErrorIfNeeded(_ errorOrNil: Error?) {
-        // エラーがなければ何もしません
+        // エラーがなければ何もしない
         guard errorOrNil != nil else { return }
         
         let message = "エラーが起きました" // ここは後述しますが、とりあえず固定文字列
