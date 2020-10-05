@@ -37,7 +37,7 @@ class SignUpViewController: UIViewController {
                             guard self != nil else { return }
                               if error == nil {
                                   // 仮登録完了画面へ遷移する処理
-                                self?.performSegue(withIdentifier: "GoOK", sender: nil)
+                               // self?.performSegue(withIdentifier: "GoOK", sender: nil)
                               }
                             self!.showErrorIfNeeded(error)
                           }
