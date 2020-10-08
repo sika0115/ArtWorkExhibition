@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,8 +22,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <segue destination="K0O-Nz-kG2" kind="presentation" identifier="GoIntro" id="0cO-cr-oi9"/>
@@ -42,18 +44,18 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro-text" translatesAutoresizingMaskIntoConstraints="NO" id="qPH-nj-kRZ">
                                 <rect key="frame" x="-13" y="0.0" width="397" height="514"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1s-cr-KcV" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1s-cr-KcV" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="120" y="522" width="134" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="y7v-xf-zSL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="ユーザ登録へ">
-                                    <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemGrayColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                        <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" systemColor="systemGrayColor"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="5"/>
@@ -62,7 +64,7 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" systemColor="systemGrayColor"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="highlightedBackgroundColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -76,8 +78,17 @@
                                     <segue destination="fpT-oQ-Eqy" kind="show" id="eOp-eZ-OAo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKC-Lp-447">
+                                <rect key="frame" x="133" y="597" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ログイン画面へ"/>
+                                <connections>
+                                    <segue destination="4B1-ti-utM" kind="show" id="qyT-k5-ZgW"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="PAq-LZ-gXC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="qPH-nj-kRZ" secondAttribute="trailing" constant="-25" id="1aT-Xr-Hnw"/>
                             <constraint firstItem="qPH-nj-kRZ" firstAttribute="leading" secondItem="CkV-wj-BVX" secondAttribute="leadingMargin" constant="-29" id="6kH-Xb-5Tn"/>
@@ -87,7 +98,6 @@
                             <constraint firstItem="PAq-LZ-gXC" firstAttribute="bottom" secondItem="n1s-cr-KcV" secondAttribute="bottom" constant="81" id="hzW-PT-6vQ"/>
                             <constraint firstItem="n1s-cr-KcV" firstAttribute="leading" secondItem="PAq-LZ-gXC" secondAttribute="leading" constant="120" id="tqv-BG-Ja7"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="PAq-LZ-gXC"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="las-vk-JVl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -115,13 +125,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6B-nS-r7s">
-                                <rect key="frame" x="64" y="210" width="35" height="21"/>
+                                <rect key="frame" x="64" y="210" width="35" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスワード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfL-DL-bbq">
-                                <rect key="frame" x="38" y="263" width="87" height="21"/>
+                                <rect key="frame" x="38" y="285" width="87" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="mxS-Yz-VxI"/>
                                 </constraints>
@@ -130,24 +140,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oaz-0k-M5L">
-                                <rect key="frame" x="139" y="150" width="199" height="34"/>
+                                <rect key="frame" x="139" y="161.5" width="199" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="aqw-ir-xyh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="10文字以内" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QJx-Pp-8PZ">
                                 <rect key="frame" x="139" y="203" width="199" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="半角英数字で6文字以上" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2EB-El-6kh">
                                 <rect key="frame" x="139" y="256" width="199" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfl-lC-Riz" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfl-lC-Riz" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="121" y="499" width="132" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="NWg-dg-C1W"/>
@@ -158,7 +168,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                        <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" systemColor="systemGrayColor"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="5"/>
@@ -176,7 +186,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="xx3-31-FHH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2EB-El-6kh" firstAttribute="top" secondItem="QJx-Pp-8PZ" secondAttribute="bottom" constant="19" id="3PT-jV-aNa"/>
                             <constraint firstItem="W6B-nS-r7s" firstAttribute="centerY" secondItem="QJx-Pp-8PZ" secondAttribute="centerY" id="3ef-gb-HdP"/>
@@ -184,7 +195,7 @@
                             <constraint firstItem="hpM-l1-R9t" firstAttribute="top" secondItem="xx3-31-FHH" secondAttribute="top" constant="155" id="92c-OG-YI4"/>
                             <constraint firstItem="oaz-0k-M5L" firstAttribute="trailing" secondItem="QJx-Pp-8PZ" secondAttribute="trailing" id="Ab8-rW-Sx0"/>
                             <constraint firstItem="QJx-Pp-8PZ" firstAttribute="trailing" secondItem="2EB-El-6kh" secondAttribute="trailing" id="CG3-nX-G9Y"/>
-                            <constraint firstItem="hpM-l1-R9t" firstAttribute="baseline" secondItem="oaz-0k-M5L" secondAttribute="baseline" id="Ewm-Gg-c94"/>
+                            <constraint firstItem="hpM-l1-R9t" firstAttribute="baseline" secondItem="oaz-0k-M5L" secondAttribute="baseline" constant="-12" id="Ewm-Gg-c94"/>
                             <constraint firstItem="QJx-Pp-8PZ" firstAttribute="top" secondItem="oaz-0k-M5L" secondAttribute="bottom" constant="19" id="FNW-zy-NUK"/>
                             <constraint firstItem="AfL-DL-bbq" firstAttribute="leading" secondItem="xx3-31-FHH" secondAttribute="leading" constant="38" id="J8S-JV-Taw"/>
                             <constraint firstItem="xx3-31-FHH" firstAttribute="trailing" secondItem="oaz-0k-M5L" secondAttribute="trailing" constant="37" id="JjX-0c-C93"/>
@@ -201,7 +212,6 @@
                             <constraint firstItem="W6B-nS-r7s" firstAttribute="top" secondItem="hpM-l1-R9t" secondAttribute="bottom" constant="34" id="r1P-WQ-nri"/>
                             <constraint firstItem="oaz-0k-M5L" firstAttribute="leading" secondItem="QJx-Pp-8PZ" secondAttribute="leading" id="zfb-bx-wxF"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="xx3-31-FHH"/>
                     </view>
                     <navigationItem key="navigationItem" id="8rF-pb-BXl"/>
                     <connections>
@@ -228,7 +238,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pf6-PJ-G7q" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pf6-PJ-G7q" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="150" y="468" width="75" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="次へ">
@@ -250,13 +260,13 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="LTT-QX-6Cj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wDS-4O-QvS" firstAttribute="centerX" secondItem="H9b-rO-VJe" secondAttribute="centerX" id="2LZ-4p-XZE"/>
                             <constraint firstItem="wDS-4O-QvS" firstAttribute="top" secondItem="LTT-QX-6Cj" secondAttribute="top" constant="270" id="3rm-Hr-gD0"/>
                             <constraint firstItem="wDS-4O-QvS" firstAttribute="leading" secondItem="LTT-QX-6Cj" secondAttribute="leading" constant="83" id="xZG-ZH-FtV"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="LTT-QX-6Cj"/>
                     </view>
                     <navigationItem key="navigationItem" id="EZ0-sj-eyd"/>
                 </viewController>
@@ -278,7 +288,7 @@
                                     <constraint firstAttribute="height" constant="100" id="zxW-dQ-Mcj"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1l-fm-uEn" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1l-fm-uEn" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="119" y="478" width="136" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="U9w-oR-gpw"/>
@@ -309,7 +319,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Dr6-vF-4bR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="SHN-GT-yR7" firstAttribute="centerX" secondItem="deG-h4-VCb" secondAttribute="centerX" id="AEA-JV-q4i"/>
                             <constraint firstItem="ENV-fm-Xoq" firstAttribute="leading" secondItem="Dr6-vF-4bR" secondAttribute="leading" constant="137" id="Eot-oe-MmD"/>
@@ -321,7 +332,6 @@
                             <constraint firstItem="ENV-fm-Xoq" firstAttribute="centerX" secondItem="n1l-fm-uEn" secondAttribute="centerX" id="hhf-Tn-Rk9"/>
                             <constraint firstItem="SHN-GT-yR7" firstAttribute="top" secondItem="Dr6-vF-4bR" secondAttribute="top" constant="77" id="rIn-Dd-7VI"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Dr6-vF-4bR"/>
                     </view>
                     <navigationItem key="navigationItem" id="EY0-a4-tox"/>
                 </viewController>
@@ -341,7 +351,7 @@
                                 <rect key="frame" x="167" y="191" width="162" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="メールアドレス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qid-jN-tUA">
                                 <rect key="frame" x="24" y="138" width="122" height="21"/>
@@ -357,7 +367,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dv3-PQ-vdg" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dv3-PQ-vdg" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="121" y="326" width="133" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ログインする">
@@ -383,15 +393,15 @@
                                 <rect key="frame" x="167" y="131" width="162" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="emailTextField" destination="acG-1M-0k9" eventType="editingDidEnd" id="IXN-Ug-h4Y"/>
                                     <action selector="emailTextField:" destination="acG-1M-0k9" eventType="editingDidEnd" id="ye5-nG-6RY"/>
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="g5s-fp-fp5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="UMh-Mq-egy"/>
                     <connections>
@@ -402,7 +412,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGB-dp-nSG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="acG-1M-0k9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3156" y="867.61619190404804"/>
+            <point key="canvasLocation" x="2311" y="894"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oEO-U1-8Le">
@@ -419,7 +429,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcy-Gg-Pgx" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcy-Gg-Pgx" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="144" y="415" width="89" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="次へ">
@@ -441,13 +451,13 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="obr-SS-RYA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVN-jX-68A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3949.5999999999999" y="530.28485757121439"/>
+            <point key="canvasLocation" x="3170" y="894"/>
         </scene>
         <!--ホーム-->
         <scene sceneID="X2z-8w-0R8">
@@ -464,7 +474,7 @@
                                     <navigationItem title="ホーム" id="crN-tw-G8x"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y06-cO-jvw" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y06-cO-jvw" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="16" y="106" width="343" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -486,7 +496,7 @@
                                     <segue destination="jiZ-6X-5sx" kind="show" id="LkH-jH-fFx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PG8-oB-YRt" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PG8-oB-YRt" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="16" y="186" width="343" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -508,7 +518,7 @@
                                     <segue destination="Lph-jn-fwt" kind="show" id="WSs-sP-sHy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rX6-Xm-yFj" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rX6-Xm-yFj" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="16" y="269" width="343" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -531,8 +541,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="AD7-TS-yFa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="ホーム" image="house" catalog="system" id="vJk-Ec-7cj"/>
                     <navigationItem key="navigationItem" id="ULc-G1-Yre"/>
@@ -572,8 +582,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="sCY-6q-z1K"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="YSB-fZ-0h4"/>
                 </viewController>
@@ -607,7 +617,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arm-Yo-FBy" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arm-Yo-FBy" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="128" y="554" width="119" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -633,8 +643,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ZWl-O1-7vE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="yCL-jA-FWJ"/>
                 </viewController>
@@ -668,7 +678,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ul2-0A-Zui" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ul2-0A-Zui" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="128" y="544" width="119" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -694,8 +704,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="pUc-LL-AD9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ieT-tW-cHo"/>
                 </viewController>
@@ -742,7 +752,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cM9-vM-H7W" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cM9-vM-H7W" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="128" y="546" width="119" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -768,8 +778,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="iEj-Ya-KfS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="iTe-VF-wZ1"/>
                 </viewController>
@@ -803,7 +813,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ue5-Ue-eeY" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ue5-Ue-eeY" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="128" y="542" width="119" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -829,8 +839,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="F22-oE-OkN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ax1-3A-2po"/>
                 </viewController>
@@ -859,7 +869,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJj-qE-vr4" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJj-qE-vr4" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="106" y="554" width="163" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -885,8 +895,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Afo-oL-Kim"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Io4-ts-I5J"/>
                 </viewController>
@@ -902,7 +912,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLE-7A-IQr" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLE-7A-IQr" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="106" y="542" width="163" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -935,8 +945,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="C6P-Ho-m4K"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="EOY-kI-hLR"/>
                 </viewController>
@@ -969,7 +979,7 @@
                                 <rect key="frame" x="43" y="91" width="130" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqE-lq-qXO">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqE-lq-qXO">
                                 <rect key="frame" x="47" y="216" width="123" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="プロフィール編集"/>
@@ -1010,8 +1020,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="8io-yt-uiB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="マイページ" image="person.crop.circle.fill" catalog="system" id="MW7-kL-LLc"/>
                     <navigationItem key="navigationItem" id="wxw-Jn-QW3"/>
@@ -1042,8 +1052,8 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="9db-JK-yqA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="War-8A-5IS"/>
                 </viewController>
@@ -1072,38 +1082,38 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySw-8a-BtZ" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySw-8a-BtZ" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="58" y="102" width="258" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="パスワード変更">
-                                    <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemGrayColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" systemColor="systemGrayColor"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7j-aS-G7c" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7j-aS-G7c" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="58" y="161" width="258" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="ユーザID変更">
-                                    <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemGrayColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" systemColor="systemGrayColor"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="5"/>
@@ -1111,8 +1121,8 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="SrR-ho-OPO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Vb9-ap-rpr"/>
                 </viewController>
@@ -1142,8 +1152,8 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="bJc-Xk-jTp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="6YQ-YT-5Dm"/>
                 </viewController>
@@ -1172,6 +1182,59 @@
             <point key="canvasLocation" x="4730" y="130"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Arm-Yo-FBy">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="PG8-oB-YRt">
+            <size key="intrinsicContentSize" width="127" height="42"/>
+        </designable>
+        <designable name="Ue5-Ue-eeY">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="Y06-cO-jvw">
+            <size key="intrinsicContentSize" width="127" height="42"/>
+        </designable>
+        <designable name="cM9-vM-H7W">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="dv3-PQ-vdg">
+            <size key="intrinsicContentSize" width="92" height="30"/>
+        </designable>
+        <designable name="j7j-aS-G7c">
+            <size key="intrinsicContentSize" width="109" height="34"/>
+        </designable>
+        <designable name="jcy-Gg-Pgx">
+            <size key="intrinsicContentSize" width="31" height="30"/>
+        </designable>
+        <designable name="mLE-7A-IQr">
+            <size key="intrinsicContentSize" width="111" height="34"/>
+        </designable>
+        <designable name="mfl-lC-Riz">
+            <size key="intrinsicContentSize" width="37" height="34"/>
+        </designable>
+        <designable name="n1l-fm-uEn">
+            <size key="intrinsicContentSize" width="111" height="34"/>
+        </designable>
+        <designable name="n1s-cr-KcV">
+            <size key="intrinsicContentSize" width="111" height="34"/>
+        </designable>
+        <designable name="pf6-PJ-G7q">
+            <size key="intrinsicContentSize" width="31" height="30"/>
+        </designable>
+        <designable name="rX6-Xm-yFj">
+            <size key="intrinsicContentSize" width="51" height="42"/>
+        </designable>
+        <designable name="ul2-0A-Zui">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="ySw-8a-BtZ">
+            <size key="intrinsicContentSize" width="129" height="34"/>
+        </designable>
+        <designable name="zJj-qE-vr4">
+            <size key="intrinsicContentSize" width="129" height="34"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="hPO-VE-Ujs"/>
         <segue reference="MSD-QZ-qR2"/>
@@ -1181,13 +1244,20 @@
         <segue reference="AmO-SY-QsL"/>
         <segue reference="wii-FB-bQA"/>
         <segue reference="LkH-jH-fFx"/>
+        <segue reference="qyT-k5-ZgW"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="explanation" width="555" height="917"/>
-        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="intro-text" width="932" height="501"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
         <image name="start" width="484" height="135.5"/>
         <image name="success" width="114" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
