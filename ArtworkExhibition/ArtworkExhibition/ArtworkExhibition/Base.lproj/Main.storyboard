@@ -629,9 +629,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ugP-yh-UFr">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugP-yh-UFr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="mpm-6v-JcO"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="画像を追加" id="QHH-yo-abL">
                                         <barButtonItem key="leftBarButtonItem" title="戻る" id="GYW-vE-fTe">
@@ -639,19 +641,43 @@
                                                 <segue destination="jiZ-6X-5sx" kind="show" id="9bQ-Gh-leX"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="次へ" id="hrL-HU-9TG">
-                                            <connections>
-                                                <segue destination="A8L-L1-5Ys" kind="show" id="S3H-dx-0Nu"/>
-                                            </connections>
-                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arm-Yo-FBy" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
-                                <rect key="frame" x="128" y="554" width="119" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwV-gx-K3w" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                                <rect key="frame" x="79" y="480" width="217" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0SD-RG-qN6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="OK">
+                                <state key="normal" title="画像を選択">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Jp-we-IT7">
+                                <rect key="frame" x="67" y="106" width="240" height="343"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arm-Yo-FBy" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                                <rect key="frame" x="79" y="545" width="217" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="cCd-aa-3Bn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="画像をアップロード">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -669,12 +695,27 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="A8L-L1-5Ys" kind="show" id="IID-PC-S9L"/>
+                                    <segue destination="A8L-L1-5Ys" kind="show" id="HTQ-Ro-5cF"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZWl-O1-7vE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ugP-yh-UFr" firstAttribute="centerX" secondItem="5Jp-we-IT7" secondAttribute="centerX" id="3Fl-iK-WMQ"/>
+                            <constraint firstItem="5Jp-we-IT7" firstAttribute="top" secondItem="ugP-yh-UFr" secondAttribute="bottom" constant="62" id="6FP-wd-hb8"/>
+                            <constraint firstItem="5Jp-we-IT7" firstAttribute="leading" secondItem="ZWl-O1-7vE" secondAttribute="leading" constant="67" id="El9-OU-Yz9"/>
+                            <constraint firstItem="ugP-yh-UFr" firstAttribute="leading" secondItem="ZWl-O1-7vE" secondAttribute="leading" id="OGT-Nz-VUd"/>
+                            <constraint firstItem="dwV-gx-K3w" firstAttribute="leading" secondItem="ZWl-O1-7vE" secondAttribute="leading" constant="79" id="Sqc-Xd-fAv"/>
+                            <constraint firstItem="dwV-gx-K3w" firstAttribute="top" secondItem="5Jp-we-IT7" secondAttribute="bottom" constant="31" id="XHo-dJ-7Ye"/>
+                            <constraint firstItem="5Jp-we-IT7" firstAttribute="centerX" secondItem="dwV-gx-K3w" secondAttribute="centerX" id="eYv-2p-i5w"/>
+                            <constraint firstItem="ZWl-O1-7vE" firstAttribute="bottom" secondItem="Arm-Yo-FBy" secondAttribute="bottom" constant="58" id="muF-U7-6JV"/>
+                            <constraint firstItem="Arm-Yo-FBy" firstAttribute="top" secondItem="dwV-gx-K3w" secondAttribute="bottom" constant="21" id="r6G-oS-MD5"/>
+                            <constraint firstItem="dwV-gx-K3w" firstAttribute="leading" secondItem="Arm-Yo-FBy" secondAttribute="leading" id="vwz-yx-DlX"/>
+                            <constraint firstItem="5Jp-we-IT7" firstAttribute="centerX" secondItem="coI-sE-UUA" secondAttribute="centerX" id="w8n-e7-6XP"/>
+                            <constraint firstItem="dwV-gx-K3w" firstAttribute="trailing" secondItem="Arm-Yo-FBy" secondAttribute="trailing" id="wuN-dm-tJs"/>
+                            <constraint firstItem="ugP-yh-UFr" firstAttribute="top" secondItem="ZWl-O1-7vE" secondAttribute="top" id="wvj-BA-EPj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yCL-jA-FWJ"/>
                 </viewController>
@@ -700,11 +741,7 @@
                                                 <segue destination="hM9-WB-35o" kind="show" id="X1w-3w-caB"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="次へ" id="y96-NM-ysW">
-                                            <connections>
-                                                <segue destination="anq-MW-19J" kind="show" id="V5C-Gx-R6Q"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="次へ" id="y96-NM-ysW"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -729,9 +766,6 @@
                                         <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="anq-MW-19J" kind="show" id="yUA-pN-r08"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pUc-LL-AD9"/>
@@ -742,247 +776,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQN-cu-zZO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8541" y="-1822"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="yOJ-g5-ZJ1">
-            <objects>
-                <viewController id="anq-MW-19J" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bSh-KX-nes">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6K6-zM-WQv">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="展示名の設定" id="bmT-2k-uRK">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="NYB-up-K9j">
-                                            <connections>
-                                                <segue destination="A8L-L1-5Ys" kind="show" id="AmO-SY-QsL"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="次へ" id="qAm-Hi-wLt">
-                                            <connections>
-                                                <segue destination="BkD-cz-WvE" kind="show" id="orR-6S-A1m"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z6U-Fd-Xb3">
-                                <rect key="frame" x="115" y="174" width="201" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="展示名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikV-Xo-WQO">
-                                <rect key="frame" x="52" y="181" width="52" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cM9-vM-H7W" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
-                                <rect key="frame" x="128" y="546" width="119" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="OK">
-                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="BkD-cz-WvE" kind="show" id="fQJ-Fj-fR9"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="iEj-Ya-KfS"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="iTe-VF-wZ1"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nfh-Qg-R3v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="9306" y="-1831"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="asl-ZM-cOW">
-            <objects>
-                <viewController id="BkD-cz-WvE" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="y2E-R5-3xF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="85e-3R-GMV">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="展示のサムネイル画像の設定" id="j7F-bH-pWh">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="3Y3-XV-amJ">
-                                            <connections>
-                                                <segue destination="anq-MW-19J" kind="show" id="kZH-rb-0Wi"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="次へ" id="d3d-cI-Pqa">
-                                            <connections>
-                                                <segue destination="F6w-25-92c" kind="show" id="bK6-dp-Lfu"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ue5-Ue-eeY" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
-                                <rect key="frame" x="128" y="542" width="119" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="OK">
-                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="F6w-25-92c" kind="show" id="awk-kV-fiC"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="F22-oE-OkN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="ax1-3A-2po"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sGe-Bb-281" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="10049" y="-1825"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ZQD-6i-BoJ">
-            <objects>
-                <viewController id="F6w-25-92c" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MeM-ew-XjX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X8a-6M-qJ4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="確認" id="CZ4-KY-SH8">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="YWb-se-8jd">
-                                            <connections>
-                                                <segue destination="BkD-cz-WvE" kind="show" id="ULT-JD-h5R"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJj-qE-vr4" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
-                                <rect key="frame" x="106" y="554" width="163" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="展示を公開する">
-                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="Bf0-p1-h3N" kind="show" id="CQV-oc-SQs"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Afo-oL-Kim"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Io4-ts-I5J"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yCx-Ys-Wyc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="10773.6" y="-1820.2398800599701"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="3KO-q9-X3Y">
-            <objects>
-                <viewController id="Bf0-p1-h3N" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="JMw-9N-Qwb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLE-7A-IQr" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
-                                <rect key="frame" x="106" y="542" width="163" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="ホームへ戻る">
-                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="Usm-9P-NM2" kind="show" id="1Oz-mK-rVT"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="作品を公開しました！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqr-nl-ihR">
-                                <rect key="frame" x="100" y="214" width="174" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="C6P-Ho-m4K"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="EOY-kI-hLR"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tZb-hg-gKY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="11520" y="-1820"/>
         </scene>
         <!--マイページ-->
         <scene sceneID="OwU-8r-cSE">
@@ -1199,7 +992,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YO4-4k-inM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6825" y="-1070"/>
+            <point key="canvasLocation" x="7212" y="-768"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Blf-bI-aga">
@@ -1224,31 +1017,25 @@
     </scenes>
     <designables>
         <designable name="Arm-Yo-FBy">
-            <size key="intrinsicContentSize" width="30" height="34"/>
+            <size key="intrinsicContentSize" width="166" height="34"/>
         </designable>
         <designable name="PG8-oB-YRt">
             <size key="intrinsicContentSize" width="127" height="42"/>
         </designable>
-        <designable name="Ue5-Ue-eeY">
-            <size key="intrinsicContentSize" width="30" height="34"/>
-        </designable>
         <designable name="Y06-cO-jvw">
             <size key="intrinsicContentSize" width="102" height="42"/>
         </designable>
-        <designable name="cM9-vM-H7W">
-            <size key="intrinsicContentSize" width="30" height="34"/>
-        </designable>
         <designable name="dv3-PQ-vdg">
             <size key="intrinsicContentSize" width="92" height="30"/>
+        </designable>
+        <designable name="dwV-gx-K3w">
+            <size key="intrinsicContentSize" width="92" height="34"/>
         </designable>
         <designable name="j7j-aS-G7c">
             <size key="intrinsicContentSize" width="109" height="34"/>
         </designable>
         <designable name="jcy-Gg-Pgx">
             <size key="intrinsicContentSize" width="31" height="30"/>
-        </designable>
-        <designable name="mLE-7A-IQr">
-            <size key="intrinsicContentSize" width="111" height="34"/>
         </designable>
         <designable name="mfl-lC-Riz">
             <size key="intrinsicContentSize" width="37" height="34"/>
@@ -1271,19 +1058,13 @@
         <designable name="ySw-8a-BtZ">
             <size key="intrinsicContentSize" width="129" height="34"/>
         </designable>
-        <designable name="zJj-qE-vr4">
-            <size key="intrinsicContentSize" width="129" height="34"/>
-        </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="QtE-I1-LT7"/>
+        <segue reference="HTQ-Ro-5cF"/>
+        <segue reference="DmY-ge-3HO"/>
         <segue reference="eK3-ZJ-i5q"/>
-        <segue reference="awk-kV-fiC"/>
-        <segue reference="ULT-JD-h5R"/>
-        <segue reference="kZH-rb-0Wi"/>
-        <segue reference="AmO-SY-QsL"/>
-        <segue reference="wii-FB-bQA"/>
-        <segue reference="LkH-jH-fFx"/>
+        <segue reference="X1w-3w-caB"/>
+        <segue reference="9bQ-Gh-leX"/>
         <segue reference="qyT-k5-ZgW"/>
     </inferredMetricsTieBreakers>
     <resources>
