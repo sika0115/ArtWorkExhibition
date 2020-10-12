@@ -508,7 +508,7 @@
                                 <rect key="frame" x="16" y="106" width="343" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="展示を作る">
+                                <state key="normal" title="展示作成">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -552,7 +552,7 @@
                                 <rect key="frame" x="16" y="269" width="343" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="設定">
+                                <state key="normal" title="マイページ">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -567,7 +567,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="gvm-UU-PeH" kind="show" id="rKC-7t-9hc"/>
+                                    <segue destination="kN2-2B-2B9" kind="show" id="XR0-PB-GKN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1002,6 +1002,16 @@
                                                 <segue destination="Usm-9P-NM2" kind="show" id="QtE-I1-LT7"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="klv-cL-evp">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="z8W-wi-zyU">
+                                                <rect key="frame" x="276" y="13" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="設定"/>
+                                            </button>
+                                            <connections>
+                                                <segue destination="gvm-UU-PeH" kind="show" id="aPM-LW-m1U"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -1058,7 +1068,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIv-rA-DFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5661.6000000000004" y="517.6911544227886"/>
+            <point key="canvasLocation" x="6081" y="69"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="No7-G8-VPP">
@@ -1089,7 +1099,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wU-gA-J0R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6631" y="531"/>
+            <point key="canvasLocation" x="7212" y="63"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MV3-Z8-42v">
@@ -1106,7 +1116,7 @@
                                     <navigationItem title="設定" id="nVb-Gm-UyI">
                                         <barButtonItem key="leftBarButtonItem" title="戻る" id="4h4-lH-gu2">
                                             <connections>
-                                                <segue destination="Usm-9P-NM2" kind="show" id="yYS-Yf-h3L"/>
+                                                <segue destination="kN2-2B-2B9" kind="show" id="eK3-ZJ-i5q"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1158,7 +1168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9nc-b6-4iQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7063" y="-221"/>
+            <point key="canvasLocation" x="7118" y="793"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rVJ-xH-mrJ">
@@ -1223,7 +1233,7 @@
             <size key="intrinsicContentSize" width="30" height="34"/>
         </designable>
         <designable name="Y06-cO-jvw">
-            <size key="intrinsicContentSize" width="127" height="42"/>
+            <size key="intrinsicContentSize" width="102" height="42"/>
         </designable>
         <designable name="cM9-vM-H7W">
             <size key="intrinsicContentSize" width="30" height="34"/>
@@ -1253,7 +1263,7 @@
             <size key="intrinsicContentSize" width="31" height="30"/>
         </designable>
         <designable name="rX6-Xm-yFj">
-            <size key="intrinsicContentSize" width="51" height="42"/>
+            <size key="intrinsicContentSize" width="127" height="42"/>
         </designable>
         <designable name="ul2-0A-Zui">
             <size key="intrinsicContentSize" width="30" height="34"/>
@@ -1266,8 +1276,8 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="hPO-VE-Ujs"/>
-        <segue reference="MSD-QZ-qR2"/>
+        <segue reference="QtE-I1-LT7"/>
+        <segue reference="eK3-ZJ-i5q"/>
         <segue reference="awk-kV-fiC"/>
         <segue reference="ULT-JD-h5R"/>
         <segue reference="kZH-rb-0Wi"/>
