@@ -1060,7 +1060,6 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="HTQ-Ro-5cF"/>
         <segue reference="DmY-ge-3HO"/>
         <segue reference="eK3-ZJ-i5q"/>
         <segue reference="X1w-3w-caB"/>
