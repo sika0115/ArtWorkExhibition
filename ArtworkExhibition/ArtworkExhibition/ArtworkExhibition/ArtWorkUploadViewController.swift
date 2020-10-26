@@ -22,14 +22,48 @@ class ArtWorkUploadViewController: UIViewController, UIImagePickerControllerDele
     }
     
     @IBAction func selectImage(_ sender: Any) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
+        /*if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
             let controller = UIImagePickerController()
             controller.delegate = self
             controller.sourceType = UIImagePickerController.SourceType.photoLibrary
 
             present(controller, animated: true, completion: nil)
-        }
+        }*/
+        pickImageFromLibrary()
+        
     }
+    
+    func countPhoto() -> String {
+            let ud = UserDefaults.standard
+            let count = ud.object(forKey: "count") as! Int
+            ud.set(count + 1, forKey: "count")
+            return String(count)
+    }
+    
+    func pickImageFromLibrary() {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
+                let controller = UIImagePickerController()
+                controller.delegate = self
+                controller.sourceType = UIImagePickerController.SourceType.photoLibrary
+
+                present(controller, animated: true, completion: nil)
+            }
+    }
+    
+    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo
+            info: [String : Any]) {
+        let storage = Storage.storage()
+                    let storageRef = storage.reference(forURL: "gs://artworkexhibition-a476c.appspot.com")
+
+                if let data = (info[UIImagePickerController.InfoKey.originalImage.rawValue] as! UIImage).pngData() {
+                        let reference = storageRef.child("image/" + NSUUID().uuidString + "/" + countPhoto() + ".jpg")
+                        reference.putData(data, metadata: nil, completion: { metaData, error in
+                            print(metaData as Any)
+                    print(error as Any)
+                })
+                dismiss(animated: true, completion: nil)
+            }
+        }
     
         
       /*//ストレージ サービスへの参照を取得
@@ -62,27 +96,3 @@ class ArtWorkUploadViewController: UIViewController, UIImagePickerControllerDele
         
 }
 
-// MARK: UIImagePickerControllerDelegate
-extension ViewController: UIImagePickerControllerDelegate {
-    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo
-        info: [String : Any]) {
-        let storage = Storage.storage()
-        let storageRef = storage.reference(forURL: "gs://artworkexhibition-a476c.appspot.com")
-
-        func countPhoto() -> String {
-                let ud = UserDefaults.standard
-                let count = ud.object(forKey: "count") as! Int
-                ud.set(count + 1, forKey: "count")
-                return String(count)
-        }
-        
-        if let data = (info[UIImagePickerController.InfoKey.originalImage.rawValue] as! UIImage).pngData() {
-            let imagesRef = storageRef.child("image/" + NSUUID().uuidString + "/" + countPhoto() + ".jpg")
-            imagesRef.putData(data, metadata: nil, completion: { metaData, error in
-                print(metaData)
-                print(error)
-            })
-            dismiss(animated: true, completion: nil)
-        }
-    }
-}
