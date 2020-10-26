@@ -669,6 +669,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="putImageSelect:" destination="hM9-WB-35o" eventType="touchUpInside" id="wXr-lp-Fhi"/>
+                                    <action selector="selectImage:" destination="hM9-WB-35o" eventType="touchUpInside" id="sBc-xI-ZhC"/>
                                     <action selector="selectImageWithLibrary:" destination="hM9-WB-35o" eventType="touchUpInside" id="wgv-YB-Tbr"/>
                                 </connections>
                             </button>

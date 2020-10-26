@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseStorage
 
-class ArtWorkUploadViewController: UIViewController {
+class ArtWorkUploadViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,16 +18,21 @@ class ArtWorkUploadViewController: UIViewController {
         let ud = UserDefaults.standard
                 ud.set(0, forKey: "count")
         
-        func countPhoto() -> String {
-                let ud = UserDefaults.standard
-                let count = ud.object(forKey: "count") as! Int
-                ud.set(count + 1, forKey: "count")
-                return String(count)
+        
+    }
+    
+    @IBAction func selectImage(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
+            let controller = UIImagePickerController()
+            controller.delegate = self
+            controller.sourceType = UIImagePickerController.SourceType.photoLibrary
+
+            present(controller, animated: true, completion: nil)
         }
+    }
+    
         
-        
-        
-        //ストレージ サービスへの参照を取得
+      /*//ストレージ サービスへの参照を取得
         let storage = Storage.storage()
         //ストレージサービスからストレージ参照を作成
         let storageRef = storage.reference(forURL: "gs://artworkexhibition-a476c.appspot.com")
@@ -42,7 +47,7 @@ class ArtWorkUploadViewController: UIViewController {
           guard let metadata = metadata else {
             // エラー発生
             return
-          }
+          }*/
         /*//メタデータには、サイズ、コンテンツタイプなどのファイルメタデータが含まれる
         let size = metadata.size
         */
@@ -55,10 +60,29 @@ class ArtWorkUploadViewController: UIViewController {
         }*/
         
         
-    }
-    
+}
 
-    
-   
+// MARK: UIImagePickerControllerDelegate
+extension ViewController: UIImagePickerControllerDelegate {
+    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo
+        info: [String : Any]) {
+        let storage = Storage.storage()
+        let storageRef = storage.reference(forURL: "gs://artworkexhibition-a476c.appspot.com")
+
+        func countPhoto() -> String {
+                let ud = UserDefaults.standard
+                let count = ud.object(forKey: "count") as! Int
+                ud.set(count + 1, forKey: "count")
+                return String(count)
+        }
+        
+        if let data = (info[UIImagePickerController.InfoKey.originalImage.rawValue] as! UIImage).pngData() {
+            let imagesRef = storageRef.child("image/" + NSUUID().uuidString + "/" + countPhoto() + ".jpg")
+            imagesRef.putData(data, metadata: nil, completion: { metaData, error in
+                print(metaData)
+                print(error)
+            })
+            dismiss(animated: true, completion: nil)
+        }
     }
 }
