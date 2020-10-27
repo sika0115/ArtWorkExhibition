@@ -669,7 +669,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="putImageSelect:" destination="hM9-WB-35o" eventType="touchUpInside" id="wXr-lp-Fhi"/>
-                                    <action selector="selectImage:" destination="hM9-WB-35o" eventType="touchUpInside" id="sBc-xI-ZhC"/>
+                                    <action selector="selectImage:" destination="hM9-WB-35o" eventType="touchUpInside" id="xwb-r6-KME"/>
                                     <action selector="selectImageWithLibrary:" destination="hM9-WB-35o" eventType="touchUpInside" id="wgv-YB-Tbr"/>
                                 </connections>
                             </button>
@@ -1056,6 +1056,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
+        <segue reference="HTQ-Ro-5cF"/>
         <segue reference="DmY-ge-3HO"/>
         <segue reference="eK3-ZJ-i5q"/>
         <segue reference="X1w-3w-caB"/>
