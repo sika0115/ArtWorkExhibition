@@ -15,13 +15,33 @@ class ArtWorkUploadViewController: UIViewController, UIImagePickerControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let ud = UserDefaults.standard
-                ud.set(0, forKey: "count")
+        //参照の作成
+        //rootへの参照
+        let storageRef = Storage.storage().reference()
+        //imagesへの子参照
+        let imagesRef = storageRef.child("images")
         
+        //images/image.jpg
+        //変数を使用して子の値を作成できることに注意
+        let fileName = "image.jpg"
+        let imageRef = imagesRef.child(fileName)
+        
+        //ファイルパス images/space.jpg
+        let path = imageRef.fullPath;
+        
+        //ファイル名 image.jpg
+        let name = imageRef.name;
+        
+        //imagesへ移動
+        let imeges = imageRef.parent()
+        
+            /* let ud = UserDefaults.standard
+                ud.set(0, forKey: "count")
+            */
         
     }
     
-    @IBAction func selectImage(_ sender: Any) {
+   /* @IBAction func selectImage(_ sender: Any) {
         /*if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
             let controller = UIImagePickerController()
             controller.delegate = self
@@ -65,34 +85,7 @@ class ArtWorkUploadViewController: UIViewController, UIImagePickerControllerDele
             }
         }
     
-        
-      /*//ストレージ サービスへの参照を取得
-        let storage = Storage.storage()
-        //ストレージサービスからストレージ参照を作成
-        let storageRef = storage.reference(forURL: "gs://artworkexhibition-a476c.appspot.com")
-        // ディスク上にあるファイル
-        let localFile = URL(string: "path/to/image")!
-        // 子参照を作成
-        // imagesRefが「images」を指すようになった(アップロードするファイルへの参照を作成)
-        let imagesRef = storageRef.child("image/" + NSUUID().uuidString + "/" + countPhoto() + ".jpg")
-        
-        //ファイルをパスにアップロード
-        let uploadTask = imagesRef.putFile(from: localFile, metadata: nil) { metadata, error in
-          guard let metadata = metadata else {
-            // エラー発生
-            return
-          }*/
-        /*//メタデータには、サイズ、コンテンツタイプなどのファイルメタデータが含まれる
-        let size = metadata.size
-        */
-        /*//アップロード後にダウンロードURLにアクセスする
-        imagesRef.downloadURL { (url, error) in
-            guard let downloadURL = url else {
-                  // エラーが発生
-                  return
-            }
-        }*/
-        
+     */
         
 }
 
