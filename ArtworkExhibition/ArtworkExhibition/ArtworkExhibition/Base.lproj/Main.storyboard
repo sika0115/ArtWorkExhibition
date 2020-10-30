@@ -670,7 +670,7 @@
                                 <connections>
                                     <action selector="putImageSelect:" destination="hM9-WB-35o" eventType="touchUpInside" id="wXr-lp-Fhi"/>
                                     <action selector="selectImage:" destination="hM9-WB-35o" eventType="touchUpInside" id="xwb-r6-KME"/>
-                                    <action selector="selectImageWithLibrary:" destination="hM9-WB-35o" eventType="touchUpInside" id="wgv-YB-Tbr"/>
+                                    <action selector="selectImageWithLibrary:" destination="hM9-WB-35o" eventType="touchUpInside" id="3jX-g8-Ww4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arm-Yo-FBy" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
