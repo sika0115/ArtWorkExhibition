@@ -23,11 +23,11 @@
 		3C77C8D2252ABBAF00E4643B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C77C8D1252ABBAF00E4643B /* SignUpViewController.swift */; };
 		3C77C8D4252AE09B00E4643B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C77C8D3252AE09B00E4643B /* SignInViewController.swift */; };
 		3C7C11D7252EE7E70038C271 /* ViewController+KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C11D6252EE7E70038C271 /* ViewController+KeyBoard.swift */; };
-		3CB306F725427B2600E057F0 /* ArtWorkUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB306F625427B2600E057F0 /* ArtWorkUploadViewController.swift */; };
 		3CB95AB824DCECB10038034F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CB95AB724DCECB10038034F /* GoogleService-Info.plist */; };
 		3CB95AB924DCECB10038034F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CB95AB724DCECB10038034F /* GoogleService-Info.plist */; };
 		3CB95ABA24DCECB10038034F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CB95AB724DCECB10038034F /* GoogleService-Info.plist */; };
 		3CD321D8253008C00012E63D /* LoginNowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD321D7253008C00012E63D /* LoginNowViewController.swift */; };
+		3CDB6D61254BCCE700AA838E /* ImageUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB6D60254BCCE700AA838E /* ImageUploadViewController.swift */; };
 		3CF4858D24CFE96E00218597 /* CALayer+RuntimeAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF4858C24CFE96E00218597 /* CALayer+RuntimeAttribute.swift */; };
 		3CF4858F24CFEA9900218597 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF4858E24CFEA9900218597 /* CustomButton.swift */; };
 		5C309393C62F967AEB479500 /* Pods_ArtworkExhibitionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA16D123E841451AE339EBE /* Pods_ArtworkExhibitionTests.framework */; };
@@ -74,9 +74,9 @@
 		3C77C8D1252ABBAF00E4643B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3C77C8D3252AE09B00E4643B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		3C7C11D6252EE7E70038C271 /* ViewController+KeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+KeyBoard.swift"; sourceTree = "<group>"; };
-		3CB306F625427B2600E057F0 /* ArtWorkUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtWorkUploadViewController.swift; sourceTree = "<group>"; };
 		3CB95AB724DCECB10038034F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3CD321D7253008C00012E63D /* LoginNowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNowViewController.swift; sourceTree = "<group>"; };
+		3CDB6D60254BCCE700AA838E /* ImageUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadViewController.swift; sourceTree = "<group>"; };
 		3CF4858C24CFE96E00218597 /* CALayer+RuntimeAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+RuntimeAttribute.swift"; sourceTree = "<group>"; };
 		3CF4858E24CFEA9900218597 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		4FC9351D24BCCF54C65AC237 /* Pods-ArtworkExhibition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtworkExhibition.debug.xcconfig"; path = "Target Support Files/Pods-ArtworkExhibition/Pods-ArtworkExhibition.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 				3C77C8D3252AE09B00E4643B /* SignInViewController.swift */,
 				3C7C11D6252EE7E70038C271 /* ViewController+KeyBoard.swift */,
 				3CD321D7253008C00012E63D /* LoginNowViewController.swift */,
-				3CB306F625427B2600E057F0 /* ArtWorkUploadViewController.swift */,
+				3CDB6D60254BCCE700AA838E /* ImageUploadViewController.swift */,
 			);
 			path = ArtworkExhibition;
 			sourceTree = "<group>";
@@ -484,10 +484,10 @@
 				3CF4858D24CFE96E00218597 /* CALayer+RuntimeAttribute.swift in Sources */,
 				3C115EF024A98A2C00F8D606 /* IntroViewController.swift in Sources */,
 				3C115EBF24A9808600F8D606 /* ViewController.swift in Sources */,
+				3CDB6D61254BCCE700AA838E /* ImageUploadViewController.swift in Sources */,
 				3CD321D8253008C00012E63D /* LoginNowViewController.swift in Sources */,
 				3C115EBB24A9808600F8D606 /* AppDelegate.swift in Sources */,
 				3CF4858F24CFEA9900218597 /* CustomButton.swift in Sources */,
-				3CB306F725427B2600E057F0 /* ArtWorkUploadViewController.swift in Sources */,
 				3C115EBD24A9808600F8D606 /* SceneDelegate.swift in Sources */,
 				3C77C8D2252ABBAF00E4643B /* SignUpViewController.swift in Sources */,
 				3C115EC524A9808600F8D606 /* ArtworkExhibition.xcdatamodeld in Sources */,

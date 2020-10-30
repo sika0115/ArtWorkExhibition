@@ -621,15 +621,15 @@
             </objects>
             <point key="canvasLocation" x="6824.8000000000002" y="-1831.0344827586209"/>
         </scene>
-        <!--Art Work Upload View Controller-->
+        <!--Image Upload View Controller-->
         <scene sceneID="eNh-fy-8Wg">
             <objects>
-                <viewController id="hM9-WB-35o" customClass="ArtWorkUploadViewController" sceneMemberID="viewController">
+                <viewController id="hM9-WB-35o" customClass="ImageUploadViewController" customModule="ArtworkExhibition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="coI-sE-UUA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ugP-yh-UFr">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugP-yh-UFr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="mpm-6v-JcO"/>
@@ -645,7 +645,7 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwV-gx-K3w" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
-                                <rect key="frame" x="104" y="427" width="166" height="44"/>
+                                <rect key="frame" x="104" y="427" width="167" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="0SD-RG-qN6"/>
                                 </constraints>
@@ -668,13 +668,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="ImageSet:" destination="hM9-WB-35o" eventType="touchUpInside" id="OAh-Xe-4aa"/>
+                                    <action selector="UploadImageButton:" destination="hM9-WB-35o" eventType="touchUpInside" id="HPP-LQ-uSq"/>
                                     <action selector="putImageSelect:" destination="hM9-WB-35o" eventType="touchUpInside" id="wXr-lp-Fhi"/>
                                     <action selector="selectImage:" destination="hM9-WB-35o" eventType="touchUpInside" id="xwb-r6-KME"/>
                                     <action selector="selectImageWithLibrary:" destination="hM9-WB-35o" eventType="touchUpInside" id="3jX-g8-Ww4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arm-Yo-FBy" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
-                                <rect key="frame" x="104" y="522" width="166" height="44"/>
+                                <rect key="frame" x="104" y="522" width="167" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="cCd-aa-3Bn"/>
                                 </constraints>
@@ -700,20 +702,32 @@
                                     <segue destination="A8L-L1-5Ys" kind="show" id="HTQ-Ro-5cF"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G0W-At-iW3">
+                                <rect key="frame" x="60" y="81" width="255" height="324"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZWl-O1-7vE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="dwV-gx-K3w" firstAttribute="top" secondItem="G0W-At-iW3" secondAttribute="bottom" constant="22" id="2nm-2f-27s"/>
+                            <constraint firstItem="dwV-gx-K3w" firstAttribute="centerX" secondItem="coI-sE-UUA" secondAttribute="centerX" id="3yr-NU-dbR"/>
+                            <constraint firstItem="G0W-At-iW3" firstAttribute="leading" secondItem="ZWl-O1-7vE" secondAttribute="leading" constant="60" id="EXY-bE-Ufc"/>
+                            <constraint firstItem="G0W-At-iW3" firstAttribute="centerX" secondItem="dwV-gx-K3w" secondAttribute="centerX" id="JWW-iU-B4H"/>
                             <constraint firstItem="ugP-yh-UFr" firstAttribute="leading" secondItem="ZWl-O1-7vE" secondAttribute="leading" id="OGT-Nz-VUd"/>
                             <constraint firstItem="dwV-gx-K3w" firstAttribute="leading" secondItem="ZWl-O1-7vE" secondAttribute="leading" constant="104" id="Sqc-Xd-fAv"/>
                             <constraint firstItem="ZWl-O1-7vE" firstAttribute="bottom" secondItem="Arm-Yo-FBy" secondAttribute="bottom" constant="81" id="muF-U7-6JV"/>
                             <constraint firstItem="Arm-Yo-FBy" firstAttribute="top" secondItem="dwV-gx-K3w" secondAttribute="bottom" constant="51" id="r6G-oS-MD5"/>
+                            <constraint firstItem="G0W-At-iW3" firstAttribute="top" secondItem="ugP-yh-UFr" secondAttribute="bottom" constant="37" id="v9c-Iz-MDU"/>
+                            <constraint firstItem="ugP-yh-UFr" firstAttribute="centerX" secondItem="G0W-At-iW3" secondAttribute="centerX" id="vYZ-NM-XmO"/>
                             <constraint firstItem="dwV-gx-K3w" firstAttribute="leading" secondItem="Arm-Yo-FBy" secondAttribute="leading" id="vwz-yx-DlX"/>
                             <constraint firstItem="dwV-gx-K3w" firstAttribute="trailing" secondItem="Arm-Yo-FBy" secondAttribute="trailing" id="wuN-dm-tJs"/>
                             <constraint firstItem="ugP-yh-UFr" firstAttribute="top" secondItem="ZWl-O1-7vE" secondAttribute="top" id="wvj-BA-EPj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yCL-jA-FWJ"/>
+                    <connections>
+                        <outlet property="UploadImageView" destination="G0W-At-iW3" id="y0e-Ip-O74"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLK-87-gn4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
