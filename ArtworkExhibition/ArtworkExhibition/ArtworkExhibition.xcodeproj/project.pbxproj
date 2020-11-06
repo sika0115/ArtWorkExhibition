@@ -20,6 +20,7 @@
 		3C115EE024A9808700F8D606 /* ArtworkExhibitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C115EDF24A9808700F8D606 /* ArtworkExhibitionUITests.swift */; };
 		3C115EF024A98A2C00F8D606 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C115EEF24A98A2C00F8D606 /* IntroViewController.swift */; };
 		3C15F1C124CFE07A00FA3B5F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C15F1C024CFE07A00FA3B5F /* HomeViewController.swift */; };
+		3C5A2E5B25550636004196E2 /* ImageFirebaseUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A2E5A25550636004196E2 /* ImageFirebaseUploadViewController.swift */; };
 		3C77C8D2252ABBAF00E4643B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C77C8D1252ABBAF00E4643B /* SignUpViewController.swift */; };
 		3C77C8D4252AE09B00E4643B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C77C8D3252AE09B00E4643B /* SignInViewController.swift */; };
 		3C7C11D7252EE7E70038C271 /* ViewController+KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C11D6252EE7E70038C271 /* ViewController+KeyBoard.swift */; };
@@ -71,6 +72,7 @@
 		3C115EE124A9808700F8D606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C115EEF24A98A2C00F8D606 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		3C15F1C024CFE07A00FA3B5F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3C5A2E5A25550636004196E2 /* ImageFirebaseUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFirebaseUploadViewController.swift; sourceTree = "<group>"; };
 		3C77C8D1252ABBAF00E4643B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3C77C8D3252AE09B00E4643B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		3C7C11D6252EE7E70038C271 /* ViewController+KeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+KeyBoard.swift"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				3C7C11D6252EE7E70038C271 /* ViewController+KeyBoard.swift */,
 				3CD321D7253008C00012E63D /* LoginNowViewController.swift */,
 				3CDB6D60254BCCE700AA838E /* ImageUploadViewController.swift */,
+				3C5A2E5A25550636004196E2 /* ImageFirebaseUploadViewController.swift */,
 			);
 			path = ArtworkExhibition;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 			files = (
 				3CF4858D24CFE96E00218597 /* CALayer+RuntimeAttribute.swift in Sources */,
 				3C115EF024A98A2C00F8D606 /* IntroViewController.swift in Sources */,
+				3C5A2E5B25550636004196E2 /* ImageFirebaseUploadViewController.swift in Sources */,
 				3C115EBF24A9808600F8D606 /* ViewController.swift in Sources */,
 				3CDB6D61254BCCE700AA838E /* ImageUploadViewController.swift in Sources */,
 				3CD321D8253008C00012E63D /* LoginNowViewController.swift in Sources */,
