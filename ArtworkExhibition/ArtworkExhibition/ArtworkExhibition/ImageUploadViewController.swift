@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ImageUploadViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class ImageUploadViewController: UIViewController {
     
     @IBOutlet weak var UploadImageView: UIImageView!{
         didSet {
@@ -72,7 +72,7 @@ class ImageUploadViewController: UIViewController, UIImagePickerControllerDelega
 
 }
 
-extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension ImageUploadViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // 写真を選んだ後に呼ばれる処理
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         // 選択した写真を取得する

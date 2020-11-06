@@ -668,11 +668,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="ImageSet:" destination="hM9-WB-35o" eventType="touchUpInside" id="OAh-Xe-4aa"/>
-                                    <action selector="UploadImageButton:" destination="hM9-WB-35o" eventType="touchUpInside" id="HPP-LQ-uSq"/>
-                                    <action selector="putImageSelect:" destination="hM9-WB-35o" eventType="touchUpInside" id="wXr-lp-Fhi"/>
-                                    <action selector="selectImage:" destination="hM9-WB-35o" eventType="touchUpInside" id="xwb-r6-KME"/>
-                                    <action selector="selectImageWithLibrary:" destination="hM9-WB-35o" eventType="touchUpInside" id="3jX-g8-Ww4"/>
+                                    <action selector="UploadImageButton:" destination="hM9-WB-35o" eventType="touchUpInside" id="Fwz-lm-MAJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arm-Yo-FBy" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
@@ -726,7 +722,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="yCL-jA-FWJ"/>
                     <connections>
-                        <outlet property="UploadImageView" destination="G0W-At-iW3" id="y0e-Ip-O74"/>
+                        <outlet property="UploadImageView" destination="G0W-At-iW3" id="H0p-ee-CED"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLK-87-gn4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
