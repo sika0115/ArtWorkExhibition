@@ -61,6 +61,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>アルバムの写真を選択します。</string>
+	<string>アルバムにアクセスします</string>
 </dict>
 </plist>
