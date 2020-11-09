@@ -18,6 +18,10 @@ class ImageFirebaseUploadViewController: UIViewController {
         ud.set(0, forKey: "count")
         // Do any additional setup after loading the view.
     }
+    
+    override func didReceiveMemoryWarning() {
+           super.didReceiveMemoryWarning()
+    }
 
     @IBAction func selectImageWithLibrary(_ sender: Any) {
         pickImageFromLibrary()

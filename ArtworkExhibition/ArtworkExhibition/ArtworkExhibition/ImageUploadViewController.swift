@@ -23,19 +23,6 @@ class ImageUploadViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    /*// 画像が選択された時に呼ばれる
-       func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])  {
-           if let selectedImage = info[.originalImage] as? UIImage {
-               UploadImageView.image = selectedImage  //imageViewにカメラロールから選んだ画像を表示する
-           }
-           self.dismiss(animated: true)  //画像をImageViewに表示したらアルバムを閉じる
-       }
-       
-       // 画像選択がキャンセルされた時に呼ばれる
-       func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-           self.dismiss(animated: true, completion: nil)
-       }
-    */
     
    @IBAction func UploadImageButton(_ sender: UIButton) {
         // カメラロールが利用可能か？
@@ -50,15 +37,7 @@ class ImageUploadViewController: UIViewController {
             // ビューに表示
             self.present(pickerView, animated: true)
         }
-   /*     let picker = UIImagePickerController() //アルバムを開く処理を呼び出す
-            picker.sourceType = .photoLibrary
-            picker.delegate = self
-            present(picker, animated: true)
-            self.present(picker, animated: true, completion: nil)
- */
     }
-    
-    
     /*
     // MARK: - Navigation
 
@@ -68,8 +47,6 @@ class ImageUploadViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-
 }
 
 extension ImageUploadViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

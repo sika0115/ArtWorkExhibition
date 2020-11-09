@@ -778,8 +778,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="selectImageWithLibrary:" destination="A8L-L1-5Ys" eventType="touchUpInside" id="6gZ-Rk-MvX"/>
-                                    <action selector="selectImageWithLibrary:" destination="xRb-Eb-EBr" eventType="touchUpInside" id="KvW-f5-ngO"/>
+                                    <action selector="selectImageWithLibrary:" destination="A8L-L1-5Ys" eventType="touchUpInside" id="yO5-iF-kvs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ul2-0A-Zui" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
@@ -827,7 +826,6 @@
                     <navigationItem key="navigationItem" id="ieT-tW-cHo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQN-cu-zZO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="xRb-Eb-EBr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="8540" y="-1822.0389805097452"/>
         </scene>
