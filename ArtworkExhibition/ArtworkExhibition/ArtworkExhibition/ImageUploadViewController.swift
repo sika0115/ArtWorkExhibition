@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
 
 class ImageUploadViewController: UIViewController {
     
@@ -18,25 +19,19 @@ class ImageUploadViewController: UIViewController {
         }
     }
     
+    let imagePicker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        imagePicker.delegate = self
         // Do any additional setup after loading the view.
     }
     
-   @IBAction func UploadImageButton(_ sender: UIButton) {
-        // カメラロールが利用可能か？
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            // 写真を選ぶビュー
-            let pickerView = UIImagePickerController()
-            // 写真の選択元をカメラロールにする
-            // 「.camera」にすればカメラを起動できる
-            pickerView.sourceType = .photoLibrary
-            // デリゲート
-            pickerView.delegate = self
-            // ビューに表示
-            self.present(pickerView, animated: true)
-        }
+    @IBAction func SelectImageButton(_ sender: Any) {
+    //画像ライブラリの呼び出し、画像の選択
+        imagePicker.allowsEditing = true //画像の切り抜き
+        imagePicker.sourceType = .photoLibrary //画像ライブラリの呼び出し
+        present(imagePicker, animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation
@@ -47,17 +42,45 @@ class ImageUploadViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func UploadFirebaseButton(_ sender: Any) {
+    //Firebaseへのアップロード
+        upload()
+    }
+    fileprivate func upload() {
+            let date = NSDate()
+            let currentTimeStampInSecond = UInt64(floor(date.timeIntervalSince1970 * 1000))
+            let storageRef = Storage.storage().reference().child("images").child("\(currentTimeStampInSecond).jpg")
+            let metaData = StorageMetadata()
+            metaData.contentType = "image/jpg"
+            if let uploadData = self.UploadImageView.image?.jpegData(compressionQuality: 0.9) {
+                storageRef.putData(uploadData, metadata: metaData) { (metadata , error) in
+                    if error != nil {
+                        print("error: \(error?.localizedDescription)")
+                    }
+                    storageRef.downloadURL(completion: { (url, error) in
+                        if error != nil {
+                            print("error: \(error?.localizedDescription)")
+                        }
+                        print("url: \(url?.absoluteString)")
+                    })
+                }
+            }
+        }
+
 }
 
+
 extension ImageUploadViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    // 写真を選んだ後に呼ばれる処理
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        // 選択した写真を取得する
-        let image = info[.originalImage] as! UIImage
-        // ビューに表示する
-        UploadImageView.image = image
-        // 写真を選ぶビューを引っ込める
-        self.dismiss(animated: true)
+        if let pickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            UploadImageView.contentMode = .scaleAspectFit
+            UploadImageView.image = pickedImage
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
 }
 

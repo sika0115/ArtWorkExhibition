@@ -668,7 +668,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="UploadImageButton:" destination="hM9-WB-35o" eventType="touchUpInside" id="Fwz-lm-MAJ"/>
+                                    <action selector="SelectImageButton:" destination="hM9-WB-35o" eventType="touchUpInside" id="ZFe-S1-hP2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arm-Yo-FBy" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
@@ -695,6 +695,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="UploadFirebaseButton:" destination="hM9-WB-35o" eventType="touchUpInside" id="p73-nR-7Tb"/>
                                     <segue destination="A8L-L1-5Ys" kind="show" id="HTQ-Ro-5cF"/>
                                 </connections>
                             </button>
