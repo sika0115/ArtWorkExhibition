@@ -749,11 +749,7 @@
                                                 <segue destination="hM9-WB-35o" kind="show" id="X1w-3w-caB"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="次へ" id="y96-NM-ysW">
-                                            <connections>
-                                                <segue destination="2w6-3x-3ln" kind="show" id="WcT-b7-cAf"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="次へ" id="y96-NM-ysW"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -1131,9 +1127,9 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
+        <segue reference="HTQ-Ro-5cF"/>
         <segue reference="DmY-ge-3HO"/>
         <segue reference="eK3-ZJ-i5q"/>
-        <segue reference="CPV-8n-Ei2"/>
         <segue reference="X1w-3w-caB"/>
         <segue reference="9bQ-Gh-leX"/>
         <segue reference="qyT-k5-ZgW"/>

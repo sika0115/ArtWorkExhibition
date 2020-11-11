@@ -51,11 +51,14 @@ extension ImageFirebaseUploadViewController: UINavigationControllerDelegate {
             let controller = UIImagePickerController()
             controller.delegate = self
             controller.sourceType = UIImagePickerController.SourceType.photoLibrary
+            controller.allowsEditing = true //画像選択後に画像の編集を行う
 
             present(controller, animated: true, completion: nil)
         }
     }
 }
+
+//↓多分うまく行ってないのこっち
 
 // MARK: UIImagePickerControllerDelegate
 extension ImageFirebaseUploadViewController: UIImagePickerControllerDelegate {
