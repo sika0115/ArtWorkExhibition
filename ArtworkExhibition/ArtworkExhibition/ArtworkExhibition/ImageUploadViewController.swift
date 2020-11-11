@@ -33,6 +33,79 @@ class ImageUploadViewController: UIViewController {
         imagePicker.sourceType = .photoLibrary //画像ライブラリの呼び出し
         present(imagePicker, animated: true, completion: nil)
     }
+    
+    @IBAction func UploadFirebaseButton(_ sender: Any) {
+    //Firebaseへのアップロード
+        //upload() //通常
+        saveToFireStore() //通常+FireStoreにURL保存
+    }
+    
+    //通常画像アップロード
+    /*
+    fileprivate func upload() {
+        let date = NSDate()
+        let currentTimeStampInSecond = UInt64(floor(date.timeIntervalSince1970 * 1000))
+        //参照の作成
+        let storageRef = Storage.storage().reference().child("images").child("\(currentTimeStampInSecond).jpg")
+        //ファイルメタデータの追加
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/jpg"
+        
+        if let uploadData = self.UploadImageView.image?.jpegData(compressionQuality: 0.5) {
+            storageRef.putData(uploadData, metadata: metaData) { (metadata , error) in
+                if error != nil {
+                    print("error: \(error?.localizedDescription)")
+                }
+                
+                storageRef.downloadURL(completion: { (url, error) in
+                    if error != nil {
+                        print("error: \(error?.localizedDescription)")
+                    }
+                    print("url: \(url?.absoluteString)")
+                })
+            }
+        }
+    }
+ */
+    
+    //画像アップロード後にURLをFireStoreに保存
+    fileprivate func upload(completed: @escaping(_ url: String?) -> Void) {
+        let date = NSDate()
+        let currentTimeStampInSecond = UInt64(floor(date.timeIntervalSince1970 * 1000))
+        let storageRef = Storage.storage().reference().child("images").child("\(currentTimeStampInSecond).jpg")
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/jpg"
+        
+        if let uploadData = self.UploadImageView.image?.jpegData(compressionQuality: 0.9) {
+            storageRef.putData(uploadData, metadata: metaData) { (metadata , error) in
+                if error != nil {
+                    completed(nil)
+                    print("error: \(error?.localizedDescription)")
+                }
+                storageRef.downloadURL(completion: { (url, error) in
+                    if error != nil {
+                        completed(nil)
+                        print("error: \(error?.localizedDescription)")
+                    }
+                    completed(url?.absoluteString)
+                })
+            }
+        }
+    }
+    
+    fileprivate func saveToFireStore(){
+        var data: [String : Any] = [:]
+        upload(){ url in
+            guard let url = url else {return }
+            data["image"] = url
+            Firestore.firestore().collection("images").document().setData(data){ error in
+                if error != nil {
+                    print("error: \(error?.localizedDescription)")
+                }
+                print("image saved!")
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -42,33 +115,7 @@ class ImageUploadViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func UploadFirebaseButton(_ sender: Any) {
-    //Firebaseへのアップロード
-        upload()
-    }
-    fileprivate func upload() {
-            let date = NSDate()
-            let currentTimeStampInSecond = UInt64(floor(date.timeIntervalSince1970 * 1000))
-            let storageRef = Storage.storage().reference().child("images").child("\(currentTimeStampInSecond).jpg")
-            let metaData = StorageMetadata()
-            metaData.contentType = "image/jpg"
-            if let uploadData = self.UploadImageView.image?.jpegData(compressionQuality: 0.9) {
-                storageRef.putData(uploadData, metadata: metaData) { (metadata , error) in
-                    if error != nil {
-                        print("error: \(error?.localizedDescription)")
-                    }
-                    storageRef.downloadURL(completion: { (url, error) in
-                        if error != nil {
-                            print("error: \(error?.localizedDescription)")
-                        }
-                        print("url: \(url?.absoluteString)")
-                    })
-                }
-            }
-        }
-
 }
-
 
 extension ImageUploadViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -83,4 +130,3 @@ extension ImageUploadViewController: UIImagePickerControllerDelegate, UINavigati
         dismiss(animated: true, completion: nil)
     }
 }
-

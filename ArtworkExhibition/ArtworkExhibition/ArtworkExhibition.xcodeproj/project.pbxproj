@@ -708,7 +708,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 69D711717359D41DAC400E2F /* Pods-ArtworkExhibitionTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VBAAT2HK77;
@@ -731,7 +730,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9A369C143C19413EDDA6B892 /* Pods-ArtworkExhibitionTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VBAAT2HK77;
@@ -754,7 +752,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9EDF82732A60935B15156F7B /* Pods-ArtworkExhibition-ArtworkExhibitionUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VBAAT2HK77;
 				INFOPLIST_FILE = ArtworkExhibitionUITests/Info.plist;
@@ -775,7 +772,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 23A9343C44EDC1DD0D9447E7 /* Pods-ArtworkExhibition-ArtworkExhibitionUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VBAAT2HK77;
 				INFOPLIST_FILE = ArtworkExhibitionUITests/Info.plist;
