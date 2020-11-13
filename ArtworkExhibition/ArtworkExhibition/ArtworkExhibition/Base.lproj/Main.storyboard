@@ -730,10 +730,10 @@
             </objects>
             <point key="canvasLocation" x="7732" y="-1820.2398800599701"/>
         </scene>
-        <!--Image Firebase Upload View Controller-->
+        <!--Image Explanation Upload View Controller-->
         <scene sceneID="6wX-NY-jaL">
             <objects>
-                <viewController id="A8L-L1-5Ys" customClass="ImageFirebaseUploadViewController" customModule="ArtworkExhibition" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="A8L-L1-5Ys" customClass="ImageExplanationUploadViewController" customModule="ArtworkExhibition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pg3-bW-ZwW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -744,7 +744,7 @@
                                     <constraint firstAttribute="height" constant="44" id="U5E-rE-uDi"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="作品名・説明を追加" id="Qmi-hY-jjH">
+                                    <navigationItem title="作品名を追加" id="Qmi-hY-jjH">
                                         <barButtonItem key="leftBarButtonItem" title="戻る" id="YbN-d0-Cmm">
                                             <connections>
                                                 <segue destination="hM9-WB-35o" kind="show" id="X1w-3w-caB"/>
@@ -754,37 +754,13 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C45-fg-kJ6" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
-                                <rect key="frame" x="128" y="397" width="119" height="47"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="ERL-bm-xcO"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="selectImageWithLibrary:" destination="A8L-L1-5Ys" eventType="touchUpInside" id="yO5-iF-kvs"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ul2-0A-Zui" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
-                                <rect key="frame" x="128" y="522" width="119" height="37"/>
+                                <rect key="frame" x="74" y="522" width="227" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="sNm-Nv-YY6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="OK">
+                                <state key="normal" title="作品名を追加">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -802,25 +778,39 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="UploadImageExp:" destination="A8L-L1-5Ys" eventType="touchUpInside" id="CkG-ZN-K6k"/>
                                     <segue destination="2w6-3x-3ln" kind="show" id="CPV-8n-Ei2"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SBC-3N-wgP">
+                                <rect key="frame" x="139" y="138" width="162" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="作品名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sov-O4-gPT">
+                                <rect key="frame" x="74" y="145" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pUc-LL-AD9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NVB-0V-4DY" firstAttribute="leading" secondItem="pUc-LL-AD9" secondAttribute="leading" id="1hW-db-epA"/>
                             <constraint firstItem="NVB-0V-4DY" firstAttribute="top" secondItem="pUc-LL-AD9" secondAttribute="top" id="Fa0-89-m7l"/>
-                            <constraint firstItem="ul2-0A-Zui" firstAttribute="top" secondItem="C45-fg-kJ6" secondAttribute="bottom" constant="78" id="Njp-aA-k1Z"/>
-                            <constraint firstItem="C45-fg-kJ6" firstAttribute="trailing" secondItem="ul2-0A-Zui" secondAttribute="trailing" id="VIy-2S-C43"/>
-                            <constraint firstItem="C45-fg-kJ6" firstAttribute="leading" secondItem="pUc-LL-AD9" secondAttribute="leading" constant="128" id="ae1-PS-dFF"/>
-                            <constraint firstItem="C45-fg-kJ6" firstAttribute="leading" secondItem="ul2-0A-Zui" secondAttribute="leading" id="eJ2-pZ-VbS"/>
-                            <constraint firstItem="NVB-0V-4DY" firstAttribute="centerX" secondItem="C45-fg-kJ6" secondAttribute="centerX" id="kng-Yw-qRe"/>
+                            <constraint firstItem="ul2-0A-Zui" firstAttribute="leading" secondItem="pUc-LL-AD9" secondAttribute="leading" constant="74" id="Kob-6T-edI"/>
+                            <constraint firstItem="ul2-0A-Zui" firstAttribute="centerX" secondItem="NVB-0V-4DY" secondAttribute="centerX" id="kLK-ns-GeO"/>
                             <constraint firstItem="NVB-0V-4DY" firstAttribute="centerX" secondItem="Pg3-bW-ZwW" secondAttribute="centerX" id="ptz-oU-obu"/>
                             <constraint firstItem="pUc-LL-AD9" firstAttribute="bottom" secondItem="ul2-0A-Zui" secondAttribute="bottom" constant="88" id="xXp-cx-PiV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ieT-tW-cHo"/>
+                    <connections>
+                        <outlet property="AddImageExp" destination="SBC-3N-wgP" id="He6-uQ-xYm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQN-cu-zZO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1084,9 +1074,6 @@
         <designable name="Arm-Yo-FBy">
             <size key="intrinsicContentSize" width="166" height="34"/>
         </designable>
-        <designable name="C45-fg-kJ6">
-            <size key="intrinsicContentSize" width="46" height="30"/>
-        </designable>
         <designable name="PG8-oB-YRt">
             <size key="intrinsicContentSize" width="127" height="42"/>
         </designable>
@@ -1121,7 +1108,7 @@
             <size key="intrinsicContentSize" width="127" height="42"/>
         </designable>
         <designable name="ul2-0A-Zui">
-            <size key="intrinsicContentSize" width="30" height="34"/>
+            <size key="intrinsicContentSize" width="111" height="34"/>
         </designable>
         <designable name="ySw-8a-BtZ">
             <size key="intrinsicContentSize" width="129" height="34"/>
@@ -1129,9 +1116,9 @@
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="hPO-VE-Ujs"/>
-        <segue reference="eK3-ZJ-i5q"/>
+        <segue reference="XR0-PB-GKN"/>
         <segue reference="X1w-3w-caB"/>
-        <segue reference="9bQ-Gh-leX"/>
+        <segue reference="LkH-jH-fFx"/>
         <segue reference="qyT-k5-ZgW"/>
     </inferredMetricsTieBreakers>
     <resources>

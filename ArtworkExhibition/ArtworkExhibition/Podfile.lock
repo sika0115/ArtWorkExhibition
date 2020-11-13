@@ -420,6 +420,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - FirebaseFirestoreSwift
   - FirebaseUI
+  - FirebaseUI/Storage
 
 SPEC REPOS:
   trunk:
@@ -482,6 +483,6 @@ SPEC CHECKSUMS:
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
 
-PODFILE CHECKSUM: 746772779f810a2eba3d066ce2f469f06198941b
+PODFILE CHECKSUM: 790e8851adef171e1e46b9637a37c6f6b3072443
 
 COCOAPODS: 1.9.3
