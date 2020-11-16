@@ -816,21 +816,164 @@
             </objects>
             <point key="canvasLocation" x="8540" y="-1822.0389805097452"/>
         </scene>
-        <!--View Controller-->
+        <!--Image Description View Controller-->
         <scene sceneID="J57-FO-Oid">
             <objects>
-                <viewController id="2w6-3x-3ln" sceneMemberID="viewController">
+                <viewController id="2w6-3x-3ln" customClass="ImageDescriptionViewController" customModule="ArtworkExhibition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s9l-Fk-SAl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mhY-t8-qfx">
+                                <rect key="frame" x="-1" y="0.0" width="376" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ApX-g2-JX7"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="作品の説明を追加" id="QAV-3L-fRB">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="yDp-TW-2d6">
+                                            <connections>
+                                                <segue destination="A8L-L1-5Ys" kind="show" id="cd6-8p-Gvp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="次へ" id="Baq-zF-USZ">
+                                            <connections>
+                                                <segue destination="vJJ-Fb-Sil" kind="show" id="rll-ES-sJl"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9wz-tO-AZq">
+                                <rect key="frame" x="31" y="135" width="313" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="説明を入力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tck-LP-vKT">
+                                <rect key="frame" x="144" y="88" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9e-cX-aWS" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                                <rect key="frame" x="78" y="518" width="219" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="in3-hD-0n2"/>
+                                </constraints>
+                                <state key="normal" title="作品の説明を追加"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addImageDescription:" destination="2w6-3x-3ln" eventType="touchUpInside" id="kh7-kI-pju"/>
+                                    <segue destination="vJJ-Fb-Sil" kind="show" id="Um1-Sg-tDi"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="uoA-np-WuV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mhY-t8-qfx" firstAttribute="trailing" secondItem="uoA-np-WuV" secondAttribute="trailing" id="BNl-Sy-oM3"/>
+                            <constraint firstItem="b9e-cX-aWS" firstAttribute="leading" secondItem="uoA-np-WuV" secondAttribute="leading" constant="78" id="Jk9-nq-8Fz"/>
+                            <constraint firstItem="uoA-np-WuV" firstAttribute="bottom" secondItem="b9e-cX-aWS" secondAttribute="bottom" constant="89" id="KTd-2r-Jcs"/>
+                            <constraint firstItem="Tck-LP-vKT" firstAttribute="centerX" secondItem="9wz-tO-AZq" secondAttribute="centerX" id="QjA-W6-VL9"/>
+                            <constraint firstItem="mhY-t8-qfx" firstAttribute="centerX" secondItem="Tck-LP-vKT" secondAttribute="centerX" id="Uby-FI-OZc"/>
+                            <constraint firstItem="9wz-tO-AZq" firstAttribute="top" secondItem="Tck-LP-vKT" secondAttribute="bottom" constant="26" id="YO5-pp-KiZ"/>
+                            <constraint firstItem="9wz-tO-AZq" firstAttribute="leading" secondItem="uoA-np-WuV" secondAttribute="leading" constant="31" id="b8c-mx-dgJ"/>
+                            <constraint firstItem="mhY-t8-qfx" firstAttribute="top" secondItem="uoA-np-WuV" secondAttribute="top" id="ezS-Cq-Pxc"/>
+                            <constraint firstItem="9wz-tO-AZq" firstAttribute="centerX" secondItem="b9e-cX-aWS" secondAttribute="centerX" id="rUA-gV-Zj8"/>
+                            <constraint firstItem="Tck-LP-vKT" firstAttribute="top" secondItem="mhY-t8-qfx" secondAttribute="bottom" constant="44" id="t6C-5l-wnH"/>
+                            <constraint firstItem="mhY-t8-qfx" firstAttribute="centerX" secondItem="s9l-Fk-SAl" secondAttribute="centerX" id="tlv-qA-xsM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VgG-KS-mst"/>
+                    <connections>
+                        <outlet property="writeDescription" destination="9wz-tO-AZq" id="69d-1U-bw6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6DJ-PV-KUY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9442" y="-1822"/>
+            <point key="canvasLocation" x="9440.7999999999993" y="-1822.0389805097452"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9gD-c2-xae">
+            <objects>
+                <viewController id="vJJ-Fb-Sil" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3B5-Kd-qES">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zA-fG-Drc" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                                <rect key="frame" x="78" y="142" width="219" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="71a-X3-4Ru"/>
+                                </constraints>
+                                <state key="normal" title="作品をもう1枚追加する"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="hM9-WB-35o" kind="show" id="9na-Af-XGj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKp-Se-rl0" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                                <rect key="frame" x="78" y="225" width="219" height="40"/>
+                                <state key="normal" title="公開する"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="san-m4-xwh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2zA-fG-Drc" firstAttribute="leading" secondItem="tKp-Se-rl0" secondAttribute="leading" id="EZB-eP-psy"/>
+                            <constraint firstItem="san-m4-xwh" firstAttribute="bottom" secondItem="tKp-Se-rl0" secondAttribute="bottom" constant="382" id="N9b-Ph-nzG"/>
+                            <constraint firstItem="2zA-fG-Drc" firstAttribute="top" secondItem="san-m4-xwh" secondAttribute="top" constant="142" id="Xvh-zM-QSf"/>
+                            <constraint firstItem="2zA-fG-Drc" firstAttribute="centerX" secondItem="3B5-Kd-qES" secondAttribute="centerX" id="o4L-d1-ZYW"/>
+                            <constraint firstItem="2zA-fG-Drc" firstAttribute="trailing" secondItem="tKp-Se-rl0" secondAttribute="trailing" id="pjC-uC-eMj"/>
+                            <constraint firstItem="tKp-Se-rl0" firstAttribute="top" secondItem="2zA-fG-Drc" secondAttribute="bottom" constant="43" id="t1n-Su-g17"/>
+                            <constraint firstItem="2zA-fG-Drc" firstAttribute="leading" secondItem="san-m4-xwh" secondAttribute="leading" constant="78" id="wLo-dK-o0u"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qX8-Mi-aoA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sed-dn-kaq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10223.200000000001" y="-1802.2488755622189"/>
         </scene>
         <!--マイページ-->
         <scene sceneID="OwU-8r-cSE">
@@ -1071,6 +1214,9 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="2zA-fG-Drc">
+            <size key="intrinsicContentSize" width="160" height="30"/>
+        </designable>
         <designable name="Arm-Yo-FBy">
             <size key="intrinsicContentSize" width="166" height="34"/>
         </designable>
@@ -1079,6 +1225,9 @@
         </designable>
         <designable name="Y06-cO-jvw">
             <size key="intrinsicContentSize" width="102" height="42"/>
+        </designable>
+        <designable name="b9e-cX-aWS">
+            <size key="intrinsicContentSize" width="123" height="30"/>
         </designable>
         <designable name="dv3-PQ-vdg">
             <size key="intrinsicContentSize" width="92" height="30"/>
@@ -1107,6 +1256,9 @@
         <designable name="rX6-Xm-yFj">
             <size key="intrinsicContentSize" width="127" height="42"/>
         </designable>
+        <designable name="tKp-Se-rl0">
+            <size key="intrinsicContentSize" width="62" height="30"/>
+        </designable>
         <designable name="ul2-0A-Zui">
             <size key="intrinsicContentSize" width="111" height="34"/>
         </designable>
@@ -1117,7 +1269,9 @@
     <inferredMetricsTieBreakers>
         <segue reference="hPO-VE-Ujs"/>
         <segue reference="XR0-PB-GKN"/>
-        <segue reference="X1w-3w-caB"/>
+        <segue reference="Um1-Sg-tDi"/>
+        <segue reference="cd6-8p-Gvp"/>
+        <segue reference="9na-Af-XGj"/>
         <segue reference="LkH-jH-fFx"/>
         <segue reference="qyT-k5-ZgW"/>
     </inferredMetricsTieBreakers>

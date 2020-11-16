@@ -76,8 +76,8 @@ class ImageUploadViewController: UIViewController {
         db.collection("artworks").document("artwork01")//データにアクセス
         upload(){ [self] url in
             guard let url = url else {return }
-            let data:[String: Any] = ["image": url]
-            db.collection("artworks").document("artwork01").setData(data){ error in
+            let data:[String: Any] = ["image": FieldValue.arrayUnion([url])]
+            db.collection("artworks").document("artwork01").setData(data, merge: true){ error in
                 if error != nil {
                     print("error: \(error?.localizedDescription)")
                 }
