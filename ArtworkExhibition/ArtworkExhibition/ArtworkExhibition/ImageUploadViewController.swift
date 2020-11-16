@@ -11,6 +11,7 @@ import Firebase
 import FirebaseStorage
 
 class ImageUploadViewController: UIViewController {
+    //let db = Firestore.firestore()
     
     @IBOutlet weak var UploadImageView: UIImageView!{
         didSet {
@@ -94,11 +95,14 @@ class ImageUploadViewController: UIViewController {
     }
     
     fileprivate func saveToFireStore(){
-        var data: [String : Any] = [:]
-        upload(){ url in
+        let db = Firestore.firestore()
+        //var data: [String : Any] = [:]
+        db.collection("artworks")//コレクションにアクセス
+        db.collection("artworks").document("artwork01")//データにアクセス
+        upload(){ [self] url in
             guard let url = url else {return }
-            data["image"] = url
-            Firestore.firestore().collection("images").document().setData(data){ error in
+            let data:[String: Any] = ["image": url]
+            db.collection("artworks").document("artwork01").setData(data, merge: true){ error in
                 if error != nil {
                     print("error: \(error?.localizedDescription)")
                 }
@@ -106,6 +110,7 @@ class ImageUploadViewController: UIViewController {
             }
         }
     }
+   
     /*
     // MARK: - Navigation
 
