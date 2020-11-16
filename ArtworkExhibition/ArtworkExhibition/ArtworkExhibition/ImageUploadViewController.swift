@@ -12,6 +12,7 @@ import FirebaseStorage
 
 class ImageUploadViewController: UIViewController {
     //let db = Firestore.firestore()
+    var cnum = 0
     
     @IBOutlet weak var UploadImageView: UIImageView!{
         didSet {
@@ -25,6 +26,7 @@ class ImageUploadViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
+        //cnum = 0
         // Do any additional setup after loading the view.
     }
     
@@ -40,34 +42,6 @@ class ImageUploadViewController: UIViewController {
         //upload() //通常
         saveToFireStore() //通常+FireStoreにURL保存
     }
-    
-    //通常画像アップロード
-    /*
-    fileprivate func upload() {
-        let date = NSDate()
-        let currentTimeStampInSecond = UInt64(floor(date.timeIntervalSince1970 * 1000))
-        //参照の作成
-        let storageRef = Storage.storage().reference().child("images").child("\(currentTimeStampInSecond).jpg")
-        //ファイルメタデータの追加
-        let metaData = StorageMetadata()
-        metaData.contentType = "image/jpg"
-        
-        if let uploadData = self.UploadImageView.image?.jpegData(compressionQuality: 0.5) {
-            storageRef.putData(uploadData, metadata: metaData) { (metadata , error) in
-                if error != nil {
-                    print("error: \(error?.localizedDescription)")
-                }
-                
-                storageRef.downloadURL(completion: { (url, error) in
-                    if error != nil {
-                        print("error: \(error?.localizedDescription)")
-                    }
-                    print("url: \(url?.absoluteString)")
-                })
-            }
-        }
-    }
- */
     
     //画像アップロード後にURLをFireStoreに保存
     fileprivate func upload(completed: @escaping(_ url: String?) -> Void) {
@@ -96,13 +70,14 @@ class ImageUploadViewController: UIViewController {
     
     fileprivate func saveToFireStore(){
         let db = Firestore.firestore()
+
         //var data: [String : Any] = [:]
         db.collection("artworks")//コレクションにアクセス
         db.collection("artworks").document("artwork01")//データにアクセス
         upload(){ [self] url in
             guard let url = url else {return }
             let data:[String: Any] = ["image": url]
-            db.collection("artworks").document("artwork01").setData(data, merge: true){ error in
+            db.collection("artworks").document("artwork01").setData(data){ error in
                 if error != nil {
                     print("error: \(error?.localizedDescription)")
                 }
