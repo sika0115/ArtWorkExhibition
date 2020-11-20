@@ -1431,8 +1431,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="6YQ-YT-5Dm"/>
                     <connections>
-                        <outlet property="artworkImage" destination="E5x-3P-v8E" id="utJ-5O-BdH"/>
                         <outlet property="scrollView" destination="Yqc-06-XGF" id="qE2-ow-NGL"/>
+                        <outlet property="thumbnail_image" destination="E5x-3P-v8E" id="xhS-DE-WDu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YO4-4k-inM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

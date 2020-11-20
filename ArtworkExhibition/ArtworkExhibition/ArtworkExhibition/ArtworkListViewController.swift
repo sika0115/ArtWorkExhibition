@@ -15,20 +15,26 @@ class ArtworkListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var thum_url = ""
         let db = Firestore.firestore()
         let dbRef = db.collection("artworks").document("artwork01")
         dbRef.getDocument{ (document, error) in
                     if let document = document {
-                        print("Tea=Darjeeling : Document data \(document.data())")
+                        //print("Tea=Darjeeling : Document data \(document.data())")
+                        let data = document.data()
+                        thum_url = data!["thumbnail"] as! String
+                        print (thum_url)
+                        
                     }else{
                         print("Document does not exist")
                     }
-                }
-        // Do any additional setup after loading the view.
+        }
+        
+     
     }
     @IBOutlet weak var scrollView: UIScrollView!
     
-    @IBOutlet weak var artworkImage: UIImageView!
+    @IBOutlet weak var thumbnail_image: UIImageView!
     
     @IBAction func seeArtwork(_ sender: Any) {
     }
