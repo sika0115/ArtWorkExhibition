@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		048ABFE893BF4C52708E5435 /* Pods_ArtworkExhibition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2110F5F45A3A813B0F5A9DC /* Pods_ArtworkExhibition.framework */; };
 		0D58B548ECF51243F8071C57 /* Pods_ArtworkExhibition_ArtworkExhibitionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6507AF82EB5B337447F9162 /* Pods_ArtworkExhibition_ArtworkExhibitionUITests.framework */; };
+		3C05C20B25676656008F2332 /* ExhibitionNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C05C20A25676656008F2332 /* ExhibitionNameViewController.swift */; };
 		3C115EBB24A9808600F8D606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C115EBA24A9808600F8D606 /* AppDelegate.swift */; };
 		3C115EBD24A9808600F8D606 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C115EBC24A9808600F8D606 /* SceneDelegate.swift */; };
 		3C115EBF24A9808600F8D606 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C115EBE24A9808600F8D606 /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 		23A9343C44EDC1DD0D9447E7 /* Pods-ArtworkExhibition-ArtworkExhibitionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtworkExhibition-ArtworkExhibitionUITests.release.xcconfig"; path = "Target Support Files/Pods-ArtworkExhibition-ArtworkExhibitionUITests/Pods-ArtworkExhibition-ArtworkExhibitionUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2EA16D123E841451AE339EBE /* Pods_ArtworkExhibitionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtworkExhibitionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A75A0A0EA4935039E68B74 /* Pods-ArtworkExhibition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtworkExhibition.release.xcconfig"; path = "Target Support Files/Pods-ArtworkExhibition/Pods-ArtworkExhibition.release.xcconfig"; sourceTree = "<group>"; };
+		3C05C20A25676656008F2332 /* ExhibitionNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitionNameViewController.swift; sourceTree = "<group>"; };
 		3C115EB724A9808600F8D606 /* ArtworkExhibition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtworkExhibition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C115EBA24A9808600F8D606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C115EBC24A9808600F8D606 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				3CDB6D60254BCCE700AA838E /* ImageUploadViewController.swift */,
 				3CC4241B255E47FD00EF2728 /* ImageExplanationUploadViewController.swift */,
 				3CA2C25425625FDF007C7DE6 /* ImageDescriptionViewController.swift */,
+				3C05C20A25676656008F2332 /* ExhibitionNameViewController.swift */,
 			);
 			path = ArtworkExhibition;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C05C20B25676656008F2332 /* ExhibitionNameViewController.swift in Sources */,
 				3CF4858D24CFE96E00218597 /* CALayer+RuntimeAttribute.swift in Sources */,
 				3C115EF024A98A2C00F8D606 /* IntroViewController.swift in Sources */,
 				3C115EBF24A9808600F8D606 /* ViewController.swift in Sources */,
