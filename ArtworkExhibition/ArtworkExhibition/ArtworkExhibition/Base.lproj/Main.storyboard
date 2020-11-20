@@ -991,10 +991,10 @@
             </objects>
             <point key="canvasLocation" x="10181.6" y="-1831.0344827586209"/>
         </scene>
-        <!--View Controller-->
+        <!--Thumbnail Upload View Controller-->
         <scene sceneID="JTk-CN-6wA">
             <objects>
-                <viewController id="g10-c6-Eqt" sceneMemberID="viewController">
+                <viewController id="g10-c6-Eqt" customClass="thumbnailUploadViewController" customModule="ArtworkExhibition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wlb-kF-UgT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1026,6 +1026,9 @@
                                         <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="SelectThumbnail:" destination="g10-c6-Eqt" eventType="touchUpInside" id="TQ6-Tn-fZM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9c-W0-woM" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="115" y="479" width="147" height="44"/>
@@ -1048,6 +1051,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="ViewRelease:" destination="g10-c6-Eqt" eventType="touchUpInside" id="Cfx-tm-tuv"/>
                                     <segue destination="KyH-2e-nEI" kind="show" id="OfD-X1-eiE"/>
                                 </connections>
                             </button>
@@ -1060,6 +1064,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="U59-PF-2CK"/>
+                    <connections>
+                        <outlet property="thumbnail" destination="UOh-5G-1J9" id="lBi-B5-cxy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ig-Hi-uUu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
