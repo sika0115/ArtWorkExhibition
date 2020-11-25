@@ -1440,10 +1440,10 @@
             </objects>
             <point key="canvasLocation" x="6824.8000000000002" y="-830.73463268365822"/>
         </scene>
-        <!--View Controller-->
+        <!--Show Artwork View Controller-->
         <scene sceneID="RNF-Yh-HpD">
             <objects>
-                <viewController id="o8k-6b-1jN" sceneMemberID="viewController">
+                <viewController id="o8k-6b-1jN" customClass="ShowArtworkViewController" customModule="ArtworkExhibition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dRF-6h-30M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1452,10 +1452,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Zv-xb-m5M">
-                                        <rect key="frame" x="8" y="105" width="359" height="331"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGI-IX-W0D">
                                         <rect key="frame" x="166" y="444" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1492,6 +1488,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Q2l-sT-giA"/>
+                    <connections>
+                        <outlet property="artworknameLabel" destination="AGI-IX-W0D" id="uG9-mN-qBz"/>
+                        <outlet property="exibinameLabel" destination="z2G-Vp-bXd" id="MoQ-uL-kAs"/>
+                        <outlet property="scrollview" destination="qsV-x9-paP" id="JGd-0i-Okw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCT-Bd-GTa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
