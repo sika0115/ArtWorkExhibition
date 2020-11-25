@@ -15,6 +15,17 @@ class ArtworkListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        func getImageByUrl(url: String) -> UIImage{
+            let url = URL(string: url)
+            do {
+                let data = try Data(contentsOf: url!)
+                return UIImage(data: data)!
+            } catch let err {
+                print("Error : \(err.localizedDescription)")
+            }
+            return UIImage()
+        }
+        
         var thum_url = ""
         let db = Firestore.firestore()
         let dbRef = db.collection("artworks").document("artwork01")
@@ -27,7 +38,7 @@ class ArtworkListViewController: UIViewController {
                     //取得したurlを変数に
                     let imageFileUrl = thum_url
                     //UIImageViewに表示するデータを準備
-                    let urlimage:UIImage = UIImage(url: imageFileUrl)
+                    let urlimage:UIImage = getImageByUrl(url: imageFileUrl)
                     //UIImageViewにurlimageを指定して表示
                     self.thumbnail_image.image = urlimage
                 }else{
@@ -54,7 +65,7 @@ class ArtworkListViewController: UIViewController {
     */
 }
 
-extension UIImage {
+/*extension UIImage {
     public convenience init(url: String) {
         let url = URL(string: url)
         do {
@@ -67,3 +78,4 @@ extension UIImage {
         self.init()
     }
 }
+*/

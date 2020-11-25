@@ -11,11 +11,10 @@ import Firebase
 import FirebaseStorage
 
 class ShowArtworkViewController: UIViewController {
-
-    @IBOutlet weak var exibinameLabel: UILabel!
-    @IBOutlet weak var artworknameLabel: UILabel!
     
     @IBOutlet weak var scrollview: UIScrollView!
+    
+    @IBOutlet weak var artworkImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,21 +29,32 @@ class ShowArtworkViewController: UIViewController {
                     let data = document.data()
                     //サムネのurl用変数に画像のurlを代入(dataからサムネのurlだけ抜き出す)
                     arrayURLString = data!["image"] as! [String]
-                    print(arrayURLString)
-                    //print(arrayURLString[0])//要素0を取得
+                    
                     //取得したurlを変数に
                     let imageFileUrl:[String] = arrayURLString
-                    print(imageFileUrl)
+                    
                     //UIImageViewに表示するデータを準備
-                    //let urlimage:UIImage = UIImage(url: imageFileUrl)
+                    print("データ準備開始")
+                    var i:Int = 0
+                    var artworkImages: [UIImage] = [] //UIImage配列を作成
+                    //var artworkImages = Array<UIImage>(repeating: UIImage, count:5)
+                    //var values = Array<Int>(count:10, repeatedValue:0)
+                    while i < Int(imageFileUrl.count) {
+                        //imageFileUrlの要素数を取得して要素数以上になったら終了
+                        
+                        //let urlimage:UIImage = UIImage(url: imageFileUrl[i])
+                        artworkImages += [UIImage(url: imageFileUrl[i])]
+                        print(i)
+                        i = i + 1
+                    }
+                    print ("データ準備終了")
                     //UIImageViewにurlimageを指定して表示
-                    //self.thumbnail_image.image = urlimage
+                    self.artworkImage.image = artworkImages[0]
                 }else{
                     print("Document does not exist")
                 }
         }
-        
-        //let firstImageView = UIImageView(image: UIImage(named: "01.JPG"))
+    
         // Do any additional setup after loading the view.
     }
     
@@ -59,4 +69,18 @@ class ShowArtworkViewController: UIViewController {
     }
     */
 
+}
+
+extension UIImage {
+    public convenience init(url: String) {
+        let url = URL(string: url)
+        do {
+            let data = try Data(contentsOf: url!)
+            self.init(data: data)!
+            return
+        } catch let err {
+            print("Error : \(err.localizedDescription)")
+        }
+        self.init()
+    }
 }
