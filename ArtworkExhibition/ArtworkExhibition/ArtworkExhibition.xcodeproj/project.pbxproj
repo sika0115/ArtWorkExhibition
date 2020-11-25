@@ -26,6 +26,7 @@
 		3C77C8D2252ABBAF00E4643B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C77C8D1252ABBAF00E4643B /* SignUpViewController.swift */; };
 		3C77C8D4252AE09B00E4643B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C77C8D3252AE09B00E4643B /* SignInViewController.swift */; };
 		3C7C11D7252EE7E70038C271 /* ViewController+KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7C11D6252EE7E70038C271 /* ViewController+KeyBoard.swift */; };
+		3C9C2F95256E16D0008DAE5A /* ShowArtworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C2F94256E16D0008DAE5A /* ShowArtworkViewController.swift */; };
 		3CA2C25525625FDF007C7DE6 /* ImageDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA2C25425625FDF007C7DE6 /* ImageDescriptionViewController.swift */; };
 		3CB95AB824DCECB10038034F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CB95AB724DCECB10038034F /* GoogleService-Info.plist */; };
 		3CB95AB924DCECB10038034F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CB95AB724DCECB10038034F /* GoogleService-Info.plist */; };
@@ -82,6 +83,7 @@
 		3C77C8D1252ABBAF00E4643B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3C77C8D3252AE09B00E4643B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		3C7C11D6252EE7E70038C271 /* ViewController+KeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+KeyBoard.swift"; sourceTree = "<group>"; };
+		3C9C2F94256E16D0008DAE5A /* ShowArtworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowArtworkViewController.swift; sourceTree = "<group>"; };
 		3CA2C25425625FDF007C7DE6 /* ImageDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDescriptionViewController.swift; sourceTree = "<group>"; };
 		3CB95AB724DCECB10038034F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3CC4241B255E47FD00EF2728 /* ImageExplanationUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExplanationUploadViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				3C05C20A25676656008F2332 /* ExhibitionNameViewController.swift */,
 				3C05C20F25677A69008F2332 /* thumbnailUploadViewController.swift */,
 				3C53CEE02567A1A100A1427E /* ArtworkListViewController.swift */,
+				3C9C2F94256E16D0008DAE5A /* ShowArtworkViewController.swift */,
 			);
 			path = ArtworkExhibition;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				3CC4241C255E47FD00EF2728 /* ImageExplanationUploadViewController.swift in Sources */,
 				3C05C21025677A69008F2332 /* thumbnailUploadViewController.swift in Sources */,
 				3C53CEE12567A1A100A1427E /* ArtworkListViewController.swift in Sources */,
+				3C9C2F95256E16D0008DAE5A /* ShowArtworkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
