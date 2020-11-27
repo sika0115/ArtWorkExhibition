@@ -13,8 +13,16 @@ import FirebaseStorage
 class ShowArtworkViewController: UIViewController {
     @IBOutlet weak var endExhibition: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //ボタンのインスタンス作成
+        let button1 = UIButton()
+        let button2 = UIButton()
+        let button3 = UIButton()
+        let button4 = UIButton()
+        let button5 = UIButton()
         
         //var artwork_url = ""
         var arrayURLString: [String] = []
@@ -63,6 +71,18 @@ class ShowArtworkViewController: UIViewController {
                         ImageView1.frame = CGRect(x: UIScreen.main.bounds.width * 0.0, y: 0.0, width: UIScreen.main.bounds.width, height: 300/*UIScreen.main.bounds.height*/)
                         ImageView1.contentMode = UIView.ContentMode.scaleAspectFit
                         scrollView.addSubview(ImageView1)
+                        
+                        let screenWidth:CGFloat = self.view.frame.width
+                        //作品説明と作品名表示用ボタンの作成
+                        
+                        button1.setTitle("作品詳細1", for:UIControl.State.normal)
+                        button1.titleLabel?.font =  UIFont.systemFont(ofSize: 18)
+                        button1.setTitleColor(UIColor.black, for: .normal)
+                        button1.frame = CGRect(x:screenWidth/4, y:350,width: screenWidth/2, height: 50)
+                        // Viewにボタンを追加
+                        self.view.addSubview(button1)
+                        
+                        //作品がもうない場合の判定
                         i = i + 1
                         if i >= Int(artworkImages.count){
                             break
@@ -73,6 +93,15 @@ class ShowArtworkViewController: UIViewController {
                         ImageView2.frame = CGRect(x: UIScreen.main.bounds.width * 1.0, y: 0.0, width: UIScreen.main.bounds.width, height: 300)
                         ImageView2.contentMode = UIView.ContentMode.scaleAspectFit
                         scrollView.addSubview(ImageView2)
+                        
+                        //作品説明と作品名表示用ボタンの作成
+                        button2.setTitle("作品詳細2", for:UIControl.State.normal)
+                        button2.titleLabel?.font =  UIFont.systemFont(ofSize: 18)
+                        button2.setTitleColor(UIColor.black, for: .normal)
+                        button2.frame = CGRect(x:screenWidth/4, y:380,width: screenWidth/2, height: 50)
+                        // Viewにボタンを追加
+                        self.view.addSubview(button2)
+                        
                         i = i + 1
                         if i >= Int(artworkImages.count){
                             break
@@ -82,6 +111,15 @@ class ShowArtworkViewController: UIViewController {
                         ImageView3.frame = CGRect(x: UIScreen.main.bounds.width * 2.0, y: 0.0, width: UIScreen.main.bounds.width, height: 300)
                         ImageView3.contentMode = UIView.ContentMode.scaleAspectFit
                         scrollView.addSubview(ImageView3)
+                        
+                        //作品説明と作品名表示用ボタンの作成
+                        button3.setTitle("作品詳細3", for:UIControl.State.normal)
+                        button3.titleLabel?.font =  UIFont.systemFont(ofSize: 18)
+                        button3.setTitleColor(UIColor.black, for: .normal)
+                        button3.frame = CGRect(x:screenWidth/4, y:410,width: screenWidth/2, height: 50)
+                        // Viewにボタンを追加
+                        self.view.addSubview(button3)
+                        
                         i = i + 1
                         if i >= Int(artworkImages.count){
                             break
@@ -91,6 +129,15 @@ class ShowArtworkViewController: UIViewController {
                         ImageView4.frame = CGRect(x: UIScreen.main.bounds.width * 3.0, y: 0.0, width: UIScreen.main.bounds.width, height: 300)
                         ImageView4.contentMode = UIView.ContentMode.scaleAspectFit
                         scrollView.addSubview(ImageView4)
+                        
+                        //作品説明と作品名表示用ボタンの作成
+                        button4.setTitle("作品詳細4", for:UIControl.State.normal)
+                        button4.titleLabel?.font =  UIFont.systemFont(ofSize: 18)
+                        button4.setTitleColor(UIColor.black, for: .normal)
+                        button4.frame = CGRect(x:screenWidth/4, y:440,width: screenWidth/2, height: 50)
+                        // Viewにボタンを追加
+                        self.view.addSubview(button4)
+                        
                         i = i + 1
                         if i >= Int(artworkImages.count){
                             break
@@ -100,6 +147,15 @@ class ShowArtworkViewController: UIViewController {
                         ImageView5.frame = CGRect(x: UIScreen.main.bounds.width * 4.0, y: 0.0, width: UIScreen.main.bounds.width, height: 300)
                         ImageView5.contentMode = UIView.ContentMode.scaleAspectFit
                         scrollView.addSubview(ImageView5)
+                        
+                        //作品説明と作品名表示用ボタンの作成
+                        button5.setTitle("作品詳細5", for:UIControl.State.normal)
+                        button5.titleLabel?.font =  UIFont.systemFont(ofSize: 18)
+                        button5.setTitleColor(UIColor.black, for: .normal)
+                        button5.frame = CGRect(x:screenWidth/4, y:470,width: screenWidth/2, height: 50)
+                        // Viewにボタンを追加
+                        self.view.addSubview(button5)
+                        
                         i = i + 1
                         if i >= Int(artworkImages.count){
                             break
@@ -109,20 +165,30 @@ class ShowArtworkViewController: UIViewController {
                     // スクロールビューを追加
                     self.view.addSubview(scrollView)
                     
+                    
                 }else{
                     print("Document does not exist")
                 }
+            
         }
+        // タップされたときのaction
+        //button1.addTarget(self, action: #selector(ViewController.buttonTapped(sender: )), for: .touchUpInside)
+        
         //self.view.bringSubviewToFront(endExhibition)
     
         // Do any additional setup after loading the view.
     }
     
+    /*func buttonTapped(sender:UIButton){
+      let storyboard: UIStoryboard = self.storyboard!
+      let second = storyboard.instantiateViewController(withIdentifier: "secondView")
+      self.present(second, animated: true, completion: nil)
+    }*/
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
@@ -135,6 +201,7 @@ class ShowArtworkViewController: UIViewController {
     */
 
 }
+
 
 extension UIImage {
     public convenience init(url: String) {
