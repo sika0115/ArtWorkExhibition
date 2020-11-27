@@ -113,7 +113,7 @@ class ShowArtworkViewController: UIViewController {
                     print("Document does not exist")
                 }
         }
-        self.view.bringSubviewToFront(endExhibition)
+        //self.view.bringSubviewToFront(endExhibition)
     
         // Do any additional setup after loading the view.
     }
