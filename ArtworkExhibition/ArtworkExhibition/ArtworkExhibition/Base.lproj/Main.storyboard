@@ -509,7 +509,7 @@
             <objects>
                 <viewController id="42p-En-TGa" customClass="HomeViewController" customModule="ArtworkExhibition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0MU-P2-ggJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDZ-Oz-5hh">
@@ -570,7 +570,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rX6-Xm-yFj" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
-                                <rect key="frame" x="16" y="329" width="343" height="82"/>
+                                <rect key="frame" x="16" y="329" width="343" height="102"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="マイページ">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1599,7 +1599,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="Q2l-sT-giA"/>
                     <connections>
-                        <outlet property="artworkImage" destination="QNL-gC-LxP" id="G2Q-5d-vVL"/>
                         <outlet property="scrollview" destination="qsV-x9-paP" id="JGd-0i-Okw"/>
                     </connections>
                 </viewController>
@@ -1695,7 +1694,7 @@
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="QtE-I1-LT7"/>
-        <segue reference="WSs-sP-sHy"/>
+        <segue reference="m4g-PS-JHG"/>
         <segue reference="XR0-PB-GKN"/>
         <segue reference="Rfk-hI-CR0"/>
         <segue reference="rll-ES-sJl"/>

@@ -14,8 +14,6 @@ class ShowArtworkViewController: UIViewController {
     
     @IBOutlet weak var scrollview: UIScrollView!
     
-    @IBOutlet weak var artworkImage: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,7 +47,34 @@ class ShowArtworkViewController: UIViewController {
                     }
                     print ("データ準備終了")
                     //UIImageViewにurlimageを指定して表示
-                    self.artworkImage.image = artworkImages[0]
+                    //self.artworkImage.image = artworkImages[0]
+                    
+                    let scrollView = UIScrollView()
+                    scrollView.frame = CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                    scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width * 3, height: UIScreen.main.bounds.height)
+                    scrollView.isPagingEnabled = true
+                    
+                    // 1枚目の画像
+                    let firstImageView = UIImageView(image: artworkImages[0])
+                    firstImageView.frame = CGRect(x: UIScreen.main.bounds.width * 0.0, y: 0.0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                    firstImageView.contentMode = UIView.ContentMode.scaleAspectFit
+                    scrollView.addSubview(firstImageView)
+                    
+                    // 2枚目の画像
+                    let secondImageView = UIImageView(image: artworkImages[1])
+                    secondImageView.frame = CGRect(x: UIScreen.main.bounds.width * 1.0, y: 0.0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                    secondImageView.contentMode = UIView.ContentMode.scaleAspectFit
+                    scrollView.addSubview(secondImageView)
+
+                    // 3枚目の画像
+                    let thirdImageView = UIImageView(image: artworkImages[2])
+                    thirdImageView.frame = CGRect(x: UIScreen.main.bounds.width * 2.0, y: 0.0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                    thirdImageView.contentMode = UIView.ContentMode.scaleAspectFit
+                    scrollView.addSubview(thirdImageView)
+
+                    // スクロールビューを追加
+                    self.view.addSubview(scrollView)
+                    
                 }else{
                     print("Document does not exist")
                 }
