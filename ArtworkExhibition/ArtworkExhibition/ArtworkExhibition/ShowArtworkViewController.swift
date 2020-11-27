@@ -11,8 +11,7 @@ import Firebase
 import FirebaseStorage
 
 class ShowArtworkViewController: UIViewController {
-    
-    @IBOutlet weak var scrollview: UIScrollView!
+    @IBOutlet weak var endExhibition: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,25 +51,26 @@ class ShowArtworkViewController: UIViewController {
                     
                     //ScrollViewの設定
                     let scrollView = UIScrollView()
-                    scrollView.frame = CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                    scrollView.frame = CGRect(x: 0.0, y: 60.0, width: UIScreen.main.bounds.width, height:300 /*UIScreen.main.bounds.height*/)
                     //CGFloat → floatにキャストしないとだめ
-                    scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width * CGFloat(artworkImages.count), height: UIScreen.main.bounds.height) //contentSizeをframeより大きく画像の枚数分だけ倍に設定
+                    scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width * CGFloat(artworkImages.count), height: 300/*UIScreen.main.bounds.height*/) //contentSizeをframeより大きく画像の枚数分だけ倍に設定
                     scrollView.isPagingEnabled = true //isPagingEnabledオプションをtrueに設定(慣性流れ防止)
                     
                     //var ImageView: [UIImageView] = []
                     while true{
                         // 画像1枚目
                         let ImageView1 = UIImageView(image: artworkImages[i])
-                        ImageView1.frame = CGRect(x: UIScreen.main.bounds.width * 0.0, y: 0.0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                        ImageView1.frame = CGRect(x: UIScreen.main.bounds.width * 0.0, y: 0.0, width: UIScreen.main.bounds.width, height: 300/*UIScreen.main.bounds.height*/)
                         ImageView1.contentMode = UIView.ContentMode.scaleAspectFit
                         scrollView.addSubview(ImageView1)
                         i = i + 1
                         if i >= Int(artworkImages.count){
                             break
                         }
+                        
                         // 画像2枚目
                         let ImageView2 = UIImageView(image: artworkImages[i])
-                        ImageView2.frame = CGRect(x: UIScreen.main.bounds.width * 1.0, y: 0.0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                        ImageView2.frame = CGRect(x: UIScreen.main.bounds.width * 1.0, y: 0.0, width: UIScreen.main.bounds.width, height: 300)
                         ImageView2.contentMode = UIView.ContentMode.scaleAspectFit
                         scrollView.addSubview(ImageView2)
                         i = i + 1
@@ -79,7 +79,7 @@ class ShowArtworkViewController: UIViewController {
                         }
                         // 画像3枚目
                         let ImageView3 = UIImageView(image: artworkImages[i])
-                        ImageView3.frame = CGRect(x: UIScreen.main.bounds.width * 2.0, y: 0.0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                        ImageView3.frame = CGRect(x: UIScreen.main.bounds.width * 2.0, y: 0.0, width: UIScreen.main.bounds.width, height: 300)
                         ImageView3.contentMode = UIView.ContentMode.scaleAspectFit
                         scrollView.addSubview(ImageView3)
                         i = i + 1
@@ -88,7 +88,7 @@ class ShowArtworkViewController: UIViewController {
                         }
                         // 画像4枚目
                         let ImageView4 = UIImageView(image: artworkImages[i])
-                        ImageView4.frame = CGRect(x: UIScreen.main.bounds.width * 3.0, y: 0.0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                        ImageView4.frame = CGRect(x: UIScreen.main.bounds.width * 3.0, y: 0.0, width: UIScreen.main.bounds.width, height: 300)
                         ImageView4.contentMode = UIView.ContentMode.scaleAspectFit
                         scrollView.addSubview(ImageView4)
                         i = i + 1
@@ -97,7 +97,7 @@ class ShowArtworkViewController: UIViewController {
                         }
                         // 画像5枚目
                         let ImageView5 = UIImageView(image: artworkImages[i])
-                        ImageView5.frame = CGRect(x: UIScreen.main.bounds.width * 4.0, y: 0.0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                        ImageView5.frame = CGRect(x: UIScreen.main.bounds.width * 4.0, y: 0.0, width: UIScreen.main.bounds.width, height: 300)
                         ImageView5.contentMode = UIView.ContentMode.scaleAspectFit
                         scrollView.addSubview(ImageView5)
                         i = i + 1
@@ -113,8 +113,14 @@ class ShowArtworkViewController: UIViewController {
                     print("Document does not exist")
                 }
         }
+        self.view.bringSubviewToFront(endExhibition)
     
         // Do any additional setup after loading the view.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
 

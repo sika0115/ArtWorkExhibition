@@ -509,7 +509,7 @@
             <objects>
                 <viewController id="42p-En-TGa" customClass="HomeViewController" customModule="ArtworkExhibition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0MU-P2-ggJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDZ-Oz-5hh">
@@ -570,7 +570,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rX6-Xm-yFj" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
-                                <rect key="frame" x="16" y="329" width="343" height="102"/>
+                                <rect key="frame" x="16" y="329" width="343" height="82"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="マイページ">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1553,53 +1553,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qsV-x9-paP">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QNL-gC-LxP">
-                                        <rect key="frame" x="42" y="92" width="291" height="334"/>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="QNL-gC-LxP" firstAttribute="centerX" secondItem="qsV-x9-paP" secondAttribute="centerX" id="1Hv-0X-9xS"/>
-                                    <constraint firstAttribute="trailing" secondItem="QNL-gC-LxP" secondAttribute="trailing" constant="42" id="EEO-uy-fXj"/>
-                                    <constraint firstItem="e52-ev-EBq" firstAttribute="bottom" secondItem="QNL-gC-LxP" secondAttribute="bottom" constant="221" id="XIB-2i-YT4"/>
-                                    <constraint firstItem="QNL-gC-LxP" firstAttribute="leading" secondItem="e52-ev-EBq" secondAttribute="leading" constant="42" id="d8X-Yu-EQy"/>
-                                    <constraint firstItem="QNL-gC-LxP" firstAttribute="top" secondItem="e52-ev-EBq" secondAttribute="top" constant="92" id="jVy-B1-znZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="QNL-gC-LxP" secondAttribute="bottom" constant="221" id="llZ-b5-vwo"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="QSQ-ut-hL1"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="e52-ev-EBq"/>
-                            </scrollView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ylm-3m-vrD">
-                                <rect key="frame" x="-3" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="-3" y="0.0" width="375" height="56"/>
                                 <items>
                                     <navigationItem title="閲覧中" id="XOt-Gq-aG9">
                                         <barButtonItem key="leftBarButtonItem" title="戻る" id="PUg-M7-mqn">
                                             <connections>
-                                                <segue destination="Lph-jn-fwt" kind="show" id="m4g-PS-JHG"/>
+                                                <segue destination="Lph-jn-fwt" kind="show" id="LeT-KA-c01"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MtC-hJ-ZZb">
+                                <rect key="frame" x="169" y="583" width="31" height="30"/>
+                                <state key="normal" title="終了"/>
+                                <connections>
+                                    <segue destination="Lph-jn-fwt" kind="show" id="xvy-D4-5jG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f0L-Dt-rjn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="f0L-Dt-rjn" firstAttribute="trailing" secondItem="ylm-3m-vrD" secondAttribute="trailing" constant="3" id="7IG-OQ-cMc"/>
-                            <constraint firstItem="ylm-3m-vrD" firstAttribute="top" secondItem="qsV-x9-paP" secondAttribute="top" id="Jaj-wA-5bZ"/>
-                            <constraint firstItem="qsV-x9-paP" firstAttribute="top" secondItem="f0L-Dt-rjn" secondAttribute="top" id="R4c-O4-fRI"/>
-                            <constraint firstItem="qsV-x9-paP" firstAttribute="bottom" secondItem="f0L-Dt-rjn" secondAttribute="bottom" id="YCq-uy-QAQ"/>
-                            <constraint firstItem="f0L-Dt-rjn" firstAttribute="bottom" secondItem="ylm-3m-vrD" secondAttribute="bottom" constant="603" id="dd0-N2-3cT"/>
-                            <constraint firstItem="qsV-x9-paP" firstAttribute="centerX" secondItem="dRF-6h-30M" secondAttribute="centerX" id="oj4-NU-RPl"/>
-                            <constraint firstItem="ylm-3m-vrD" firstAttribute="leading" secondItem="dRF-6h-30M" secondAttribute="leadingMargin" constant="-19" id="pBF-kl-wvo"/>
-                            <constraint firstItem="qsV-x9-paP" firstAttribute="leading" secondItem="f0L-Dt-rjn" secondAttribute="leading" id="rx6-6v-NDe"/>
+                            <constraint firstItem="ylm-3m-vrD" firstAttribute="top" secondItem="f0L-Dt-rjn" secondAttribute="top" id="5OK-8f-Xco"/>
+                            <constraint firstItem="MtC-hJ-ZZb" firstAttribute="leading" secondItem="f0L-Dt-rjn" secondAttribute="leading" constant="169" id="AC4-p1-8pi"/>
+                            <constraint firstItem="f0L-Dt-rjn" firstAttribute="trailing" secondItem="ylm-3m-vrD" secondAttribute="trailing" constant="3" id="CPY-bh-ih4"/>
+                            <constraint firstItem="ylm-3m-vrD" firstAttribute="centerX" secondItem="MtC-hJ-ZZb" secondAttribute="centerX" id="EMS-u6-vd0"/>
+                            <constraint firstItem="f0L-Dt-rjn" firstAttribute="bottom" secondItem="MtC-hJ-ZZb" secondAttribute="bottom" constant="34" id="oDY-BO-cb4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Q2l-sT-giA"/>
                     <connections>
-                        <outlet property="scrollview" destination="qsV-x9-paP" id="JGd-0i-Okw"/>
+                        <outlet property="endExhibition" destination="MtC-hJ-ZZb" id="8rt-KS-aA5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCT-Bd-GTa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1693,8 +1679,8 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="QtE-I1-LT7"/>
-        <segue reference="m4g-PS-JHG"/>
+        <segue reference="vSN-nG-fV1"/>
+        <segue reference="LeT-KA-c01"/>
         <segue reference="XR0-PB-GKN"/>
         <segue reference="Rfk-hI-CR0"/>
         <segue reference="rll-ES-sJl"/>
