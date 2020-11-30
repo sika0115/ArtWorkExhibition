@@ -182,19 +182,35 @@ class ShowArtworkViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @objc func button1Tapped(_ sender: UIButton) {// selectorで呼び出す場合Swift4からは「@objc」をつける。
-        self.performSegue(withIdentifier: "toArtworkDataView", sender: nil)
-        print("buttonTapped called") //呼び出し成功
+    @objc func button1Tapped(_ sender: UIButton) {
         print(artworkname[0]) //作品名取得ok
         print(artworkdesc[0]) //作品説明取得ok
         artworkname_deli = artworkname[0]
         artworkdesc_deli = artworkdesc[0]
+        // selectorで呼び出す場合Swift4からは「@objc」をつける。
+        self.performSegue(withIdentifier: "toArtworkDataView", sender: nil)
+        print("buttonTapped called") //呼び出し成功
         
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    // ①セグエ実行前処理
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            print("セグエ実行前処理")
+            // ②Segueの識別子確認
+            if segue.identifier == "toArtworkDataView" {
+     
+            // ③遷移先ViewCntrollerの取得
+            let nextView = segue.destination as! ArtworkDataViewController
+     
+            // ④値の設定
+            nextView.text1 = artworkname_deli
+            nextView.text2 = artworkdesc_deli
+            print("ok")
+        }
     }
 
     /*
