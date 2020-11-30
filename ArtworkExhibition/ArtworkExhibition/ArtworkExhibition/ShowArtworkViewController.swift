@@ -12,7 +12,10 @@ import FirebaseStorage
 
 class ShowArtworkViewController: UIViewController {
     @IBOutlet weak var endExhibition: UIButton!
-    
+    var artworkname_deli: String?
+    var artworkdesc_deli: String?
+    var artworkname: [String] = [] //作品名用格納配列
+    var artworkdesc: [String] = [] //作品説明用格納配列
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +28,7 @@ class ShowArtworkViewController: UIViewController {
         let button5 = UIButton()
         
         //var artwork_url = ""
-        var arrayURLString: [String] = []
+        var arrayURLString: [String] = [] //作品URL用格納配列
         let db = Firestore.firestore()
         let dbRef = db.collection("artworks").document("artwork01")
         dbRef.getDocument{ (document, error) in
@@ -34,10 +37,12 @@ class ShowArtworkViewController: UIViewController {
                     let data = document.data()
                     //サムネのurl用変数に画像のurlを代入(dataからサムネのurlだけ抜き出す)
                     arrayURLString = data!["image"] as! [String]
-                    
+                    //作品名と作品説明の取得、格納
+                    self.artworkname = data!["artwork01name"] as! [String]
+                    self.artworkdesc = data!["artwork01desc"] as! [String]
                     //取得したurlを変数に
                     let imageFileUrl:[String] = arrayURLString
-                    
+                    //let artworknameArray:[String] = artworkname
                     //UIImageViewに表示するデータを準備
                     print("データ準備開始")
                     var i:Int = 0
@@ -180,6 +185,11 @@ class ShowArtworkViewController: UIViewController {
     @objc func button1Tapped(_ sender: UIButton) {// selectorで呼び出す場合Swift4からは「@objc」をつける。
         self.performSegue(withIdentifier: "toArtworkDataView", sender: nil)
         print("buttonTapped called") //呼び出し成功
+        print(artworkname[0]) //作品名取得ok
+        print(artworkdesc[0]) //作品説明取得ok
+        artworkname_deli = artworkname[0]
+        artworkdesc_deli = artworkdesc[0]
+        
     }
     
     override func didReceiveMemoryWarning() {
