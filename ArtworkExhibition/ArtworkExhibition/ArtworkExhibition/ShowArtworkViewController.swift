@@ -171,12 +171,17 @@ class ShowArtworkViewController: UIViewController {
                 }
             
         }
-        // タップされたときのaction
-        //button1.addTarget(self, action: #selector(ViewController.buttonTapped(sender: )), for: .touchUpInside)
+        //button1押下時に関数button1Tappedを呼び出す
+        button1.addTarget(self, action: #selector(button1Tapped), for: .touchUpInside)
         
-        //self.view.bringSubviewToFront(endExhibition)
-    
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func button1Tapped(_ sender: UIButton) {// selectorで呼び出す場合Swift4からは「@objc」をつける。
+            //let nextvc = NextViewController()
+            //nextvc.view.backgroundColor = UIColor.blue
+            //self.present(nextvc, animated: true, completion: nil)
+            print("buttonTapped called") //呼び出し成功
     }
     
     /*func buttonTapped(sender:UIButton){
