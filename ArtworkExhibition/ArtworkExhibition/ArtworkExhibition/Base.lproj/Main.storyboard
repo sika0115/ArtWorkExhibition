@@ -1586,11 +1586,28 @@
                     <navigationItem key="navigationItem" id="Q2l-sT-giA"/>
                     <connections>
                         <outlet property="endExhibition" destination="MtC-hJ-ZZb" id="8rt-KS-aA5"/>
+                        <segue destination="DbR-Tg-MhK" kind="show" identifier="toArtworkDataView" id="i8W-hW-j1U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCT-Bd-GTa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7672.8000000000002" y="-831.63418290854577"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eU1-Mk-sqi">
+            <objects>
+                <viewController id="DbR-Tg-MhK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iEc-Dj-hwx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jhC-Og-So6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="X1W-P9-usP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tKp-2m-TA8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8490" y="-831"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Blf-bI-aga">

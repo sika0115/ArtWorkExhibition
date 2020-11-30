@@ -178,17 +178,9 @@ class ShowArtworkViewController: UIViewController {
     }
     
     @objc func button1Tapped(_ sender: UIButton) {// selectorで呼び出す場合Swift4からは「@objc」をつける。
-            //let nextvc = NextViewController()
-            //nextvc.view.backgroundColor = UIColor.blue
-            //self.present(nextvc, animated: true, completion: nil)
-            print("buttonTapped called") //呼び出し成功
+        self.performSegue(withIdentifier: "toArtworkDataView", sender: nil)
+        print("buttonTapped called") //呼び出し成功
     }
-    
-    /*func buttonTapped(sender:UIButton){
-      let storyboard: UIStoryboard = self.storyboard!
-      let second = storyboard.instantiateViewController(withIdentifier: "secondView")
-      self.present(second, animated: true, completion: nil)
-    }*/
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
