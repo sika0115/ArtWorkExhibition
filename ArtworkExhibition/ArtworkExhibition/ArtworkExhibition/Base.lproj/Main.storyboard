@@ -1497,21 +1497,28 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yqc-06-XGF">
                                 <rect key="frame" x="0.0" y="57" width="375" height="590"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E5x-3P-v8E">
-                                        <rect key="frame" x="58" y="34" width="259" height="83"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E5x-3P-v8E">
+                                        <rect key="frame" x="114" y="34" width="275" height="83"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2e-0b-hEF">
-                                        <rect key="frame" x="256" y="125" width="77" height="30"/>
+                                        <rect key="frame" x="312" y="125" width="77" height="30"/>
                                         <state key="normal" title="展示を見る"/>
                                         <connections>
                                             <action selector="seeArtwork:" destination="Lph-jn-fwt" eventType="touchUpInside" id="9Tw-nQ-eDO"/>
                                             <segue destination="o8k-6b-1jN" kind="show" id="N9B-LB-PUH"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWn-Uh-cG9">
+                                        <rect key="frame" x="139" y="8" width="216" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ATM-N6-8Ej" firstAttribute="bottom" secondItem="E2e-0b-hEF" secondAttribute="bottom" constant="435" id="92B-JO-pJs"/>
-                                    <constraint firstItem="E5x-3P-v8E" firstAttribute="centerX" secondItem="Yqc-06-XGF" secondAttribute="centerX" id="ZYX-Um-5zt"/>
+                                    <constraint firstItem="E5x-3P-v8E" firstAttribute="centerX" secondItem="Yqc-06-XGF" secondAttribute="centerX" constant="8" id="ZYX-Um-5zt"/>
                                     <constraint firstItem="E2e-0b-hEF" firstAttribute="leading" secondItem="ATM-N6-8Ej" secondAttribute="leading" constant="256" id="Zcl-UO-4qy"/>
                                     <constraint firstItem="E5x-3P-v8E" firstAttribute="top" secondItem="ATM-N6-8Ej" secondAttribute="top" constant="34" id="jnG-Od-yeH"/>
                                     <constraint firstAttribute="trailing" secondItem="E2e-0b-hEF" secondAttribute="trailing" constant="42" id="lsh-ST-1Av"/>
@@ -1537,6 +1544,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="6YQ-YT-5Dm"/>
                     <connections>
+                        <outlet property="exibinameLabel" destination="BWn-Uh-cG9" id="aR0-0f-5I2"/>
                         <outlet property="scrollView" destination="Yqc-06-XGF" id="qE2-ow-NGL"/>
                         <outlet property="thumbnail_image" destination="E5x-3P-v8E" id="xhS-DE-WDu"/>
                     </connections>
@@ -1739,7 +1747,7 @@
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="vSN-nG-fV1"/>
-        <segue reference="17N-ds-lTj"/>
+        <segue reference="N9B-LB-PUH"/>
         <segue reference="LeT-KA-c01"/>
         <segue reference="XR0-PB-GKN"/>
         <segue reference="Rfk-hI-CR0"/>

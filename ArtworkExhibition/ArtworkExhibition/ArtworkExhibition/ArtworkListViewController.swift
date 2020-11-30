@@ -11,7 +11,6 @@ import Firebase
 import FirebaseStorage
 
 class ArtworkListViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +26,7 @@ class ArtworkListViewController: UIViewController {
         }
         
         var thum_url = ""
+        var exibinameString = ""
         let db = Firestore.firestore()
         let dbRef = db.collection("artworks").document("artwork01")
         dbRef.getDocument{ (document, error) in
@@ -35,6 +35,8 @@ class ArtworkListViewController: UIViewController {
                     let data = document.data()
                     //サムネのurl用変数に画像のurlを代入(dataからサムネのurlだけ抜き出す)
                     thum_url = data!["thumbnail"] as! String
+                    exibinameString = data!["exibiname"] as! String
+                    self.exibinameLabel.text = exibinameString
                     //取得したurlを変数に
                     let imageFileUrl = thum_url
                     //UIImageViewに表示するデータを準備
@@ -46,6 +48,7 @@ class ArtworkListViewController: UIViewController {
                 }
         }
     }
+    @IBOutlet weak var exibinameLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet var thumbnail_image: UIImageView!
@@ -53,6 +56,7 @@ class ArtworkListViewController: UIViewController {
     @IBAction func seeArtwork(_ sender: Any) {
         
     }
+    
 
     /*
     // MARK: - Navigation
