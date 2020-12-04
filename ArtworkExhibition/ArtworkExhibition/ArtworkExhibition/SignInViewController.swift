@@ -17,29 +17,48 @@ class SignInViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    @IBOutlet private weak var emailTextField: UITextField!
-    @IBOutlet private weak var passwordTextField: UITextField!
     
+    override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+    }
+    
+    @IBOutlet private weak var emailTextField: UITextField! //メールアドレス用テキストフィールド
+    @IBOutlet private weak var passwordTextField: UITextField! //パスワード用テキストフィールド
+    
+    // ログインボタン押下時の処理
     @IBAction private func didTapSignInButton() {
-        // あとで実装
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         
+        //サインインを行う
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
             guard let self = self else { return }
             if (result?.user) != nil {
-                // サインイン後の画面へ
+                print("サインイン")
+                //現在のユーザを取得 - currentUser
+                let user = Auth.auth().currentUser
+                if let user = user {
+                    //let uid = user.uid
+                    let email = user.email
+                    let usename = user.displayName
+                    //print(uid)
+                    print(email!)
+                    print(usename!)
+                }
+                // サインイン後の画面へ (セグエ指定画面遷移)
                 self.performSegue(withIdentifier: "goSignIn", sender: nil)
             }
             self.showErrorIfNeeded(error)
         }
     }
     
+    //エラー処理
     private func showErrorIfNeeded(_ errorOrNil: Error?) {
-        // エラーがなければ何もしません
+        // エラーがなければ何もしない
         guard let error = errorOrNil else { return }
         
         let message = errorMessage(of: error) // エラーメッセージを取得
+        print(message) //メッセージ取得ok
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
@@ -47,20 +66,20 @@ class SignInViewController: UIViewController {
 
     private func errorMessage(of error: Error) -> String {
         var message = "エラーが発生しました"
+        print("エラー発生")
+        // 変数errorはSDKが返してきたエラー
         guard let errcd = AuthErrorCode(rawValue: (error as NSError).code) else {
             return message
         }
         
         switch errcd {
-        case .networkError: message = "ネットワークに接続できません"
-        case .userNotFound: message = "ユーザが見つかりません"
-        case .invalidEmail: message = "不正なメールアドレスです"
-        case .emailAlreadyInUse: message = "このメールアドレスは既に使われています"
-        case .wrongPassword: message = "入力した認証情報でサインインできません"
-        case .userDisabled: message = "このアカウントは無効です"
-        case .weakPassword: message = "パスワードが脆弱すぎます"
-        // これは一例です。必要に応じて増減させてください
-        default: break
+            case .networkError: message = "ネットワークに接続できません"
+            case .userNotFound: message = "ユーザが見つかりません"
+            case .invalidEmail: message = "不正なメールアドレスです"
+            case .emailAlreadyInUse: message = "このメールアドレスは既に使われています"
+            case .wrongPassword: message = "入力した認証情報でサインインできません"
+            case .userDisabled: message = "このアカウントは無効です"
+            default: break
         }
         return message
     }
