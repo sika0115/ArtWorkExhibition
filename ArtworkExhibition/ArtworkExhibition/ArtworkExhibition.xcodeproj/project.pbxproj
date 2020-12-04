@@ -11,6 +11,7 @@
 		0D58B548ECF51243F8071C57 /* Pods_ArtworkExhibition_ArtworkExhibitionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6507AF82EB5B337447F9162 /* Pods_ArtworkExhibition_ArtworkExhibitionUITests.framework */; };
 		3C05C20B25676656008F2332 /* ExhibitionNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C05C20A25676656008F2332 /* ExhibitionNameViewController.swift */; };
 		3C05C21025677A69008F2332 /* thumbnailUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C05C20F25677A69008F2332 /* thumbnailUploadViewController.swift */; };
+		3C07F568257A165600788DE3 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C07F567257A165600788DE3 /* MyPageViewController.swift */; };
 		3C115EBB24A9808600F8D606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C115EBA24A9808600F8D606 /* AppDelegate.swift */; };
 		3C115EBD24A9808600F8D606 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C115EBC24A9808600F8D606 /* SceneDelegate.swift */; };
 		3C115EBF24A9808600F8D606 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C115EBE24A9808600F8D606 /* ViewController.swift */; };
@@ -63,6 +64,7 @@
 		33A75A0A0EA4935039E68B74 /* Pods-ArtworkExhibition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtworkExhibition.release.xcconfig"; path = "Target Support Files/Pods-ArtworkExhibition/Pods-ArtworkExhibition.release.xcconfig"; sourceTree = "<group>"; };
 		3C05C20A25676656008F2332 /* ExhibitionNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitionNameViewController.swift; sourceTree = "<group>"; };
 		3C05C20F25677A69008F2332 /* thumbnailUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thumbnailUploadViewController.swift; sourceTree = "<group>"; };
+		3C07F567257A165600788DE3 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		3C115EB724A9808600F8D606 /* ArtworkExhibition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtworkExhibition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C115EBA24A9808600F8D606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C115EBC24A9808600F8D606 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				3C53CEE02567A1A100A1427E /* ArtworkListViewController.swift */,
 				3C9C2F94256E16D0008DAE5A /* ShowArtworkViewController.swift */,
 				3C189DBF2574CD6700D4E516 /* ArtworkDataViewController.swift */,
+				3C07F567257A165600788DE3 /* MyPageViewController.swift */,
 			);
 			path = ArtworkExhibition;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				3C189DC02574CD6700D4E516 /* ArtworkDataViewController.swift in Sources */,
 				3C7C11D7252EE7E70038C271 /* ViewController+KeyBoard.swift in Sources */,
 				3C15F1C124CFE07A00FA3B5F /* HomeViewController.swift in Sources */,
+				3C07F568257A165600788DE3 /* MyPageViewController.swift in Sources */,
 				3CC4241C255E47FD00EF2728 /* ImageExplanationUploadViewController.swift in Sources */,
 				3C05C21025677A69008F2332 /* thumbnailUploadViewController.swift in Sources */,
 				3C53CEE12567A1A100A1427E /* ArtworkListViewController.swift in Sources */,
