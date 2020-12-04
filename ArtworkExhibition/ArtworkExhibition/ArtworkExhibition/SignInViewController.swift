@@ -40,10 +40,10 @@ class SignInViewController: UIViewController {
                 if let current_user = c_user {
                     //let uid = user.uid
                     let email = current_user.email
-                    let usename = current_user.displayName
+                    let username = current_user.displayName
                     //print(uid)
                     print(email!)
-                    print(usename!)
+                    print(username!)
                 }
                 print ("画面遷移へ")
                 // サインイン後の画面へ (セグエ指定画面遷移)

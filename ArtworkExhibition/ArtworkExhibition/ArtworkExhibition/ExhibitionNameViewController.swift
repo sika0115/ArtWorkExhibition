@@ -22,6 +22,7 @@ class ExhibitionNameViewController: UIViewController {
     
     //文字列保存用の変数
     var exhibiNameString = ""
+    var usernameString = ""
     
     @IBAction func UploadExibiName(_ sender: Any) {
         // TextField(AddImageExp)から文字を取得
@@ -29,12 +30,21 @@ class ExhibitionNameViewController: UIViewController {
         // TextField(AddImageExp)の中身をクリア
         ExibiNameField.text = ""
         
+        //現在のユーザを取得 - currentUser
+        let c_user = Auth.auth().currentUser
+        if let current_user = c_user {
+            let username = current_user.displayName
+            usernameString = username!
+            print(username!)
+        }
         //Cloud Firestoreに入力情報をアップロード、保存する
         let db = Firestore.firestore()
         db.collection("artworks")//コレクションにアクセス
         db.collection("artworks").document("artwork01")//データにアクセス
-        let data: [String: Any] = ["exibiname":exhibiNameString] //更新用データ
-        db.collection("artworks").document("artwork01").setData(data, merge: true)
+        let exibiname_data: [String: Any] = ["exibiname":exhibiNameString] //更新用データ
+        let username_data: [String: Any] = ["e_username":usernameString] 
+        db.collection("artworks").document("artwork01").setData(exibiname_data, merge: true)
+        db.collection("artworks").document("artwork01").setData(username_data, merge: true)
     }
     
     /*

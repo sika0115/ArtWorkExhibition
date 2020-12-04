@@ -573,7 +573,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rX6-Xm-yFj" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
-                                <rect key="frame" x="16" y="329" width="343" height="82"/>
+                                <rect key="frame" x="16" y="329" width="343" height="131"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="マイページ">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1272,9 +1272,6 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="設定"/>
                                             </button>
-                                            <connections>
-                                                <segue destination="gvm-UU-PeH" kind="show" id="aPM-LW-m1U"/>
-                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -1285,9 +1282,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqE-lq-qXO">
                                 <rect key="frame" x="47" y="216" width="123" height="30"/>
                                 <state key="normal" title="プロフィール編集"/>
-                                <connections>
-                                    <segue destination="v9d-5r-d3X" kind="show" id="gbw-pp-Ycr"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jll-Z1-Ael">
                                 <rect key="frame" x="252" y="102" width="17" height="21"/>
@@ -1357,122 +1351,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIv-rA-DFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6081" y="69"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="No7-G8-VPP">
-            <objects>
-                <viewController id="v9d-5r-d3X" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ppI-uH-GSJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qqD-P7-jOu">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="プロフィール編集" id="IdP-7X-0ih">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="MTR-xu-QXw">
-                                            <connections>
-                                                <segue destination="kN2-2B-2B9" kind="show" id="MSD-QZ-qR2"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="9db-JK-yqA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="War-8A-5IS"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6wU-gA-J0R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7212" y="63"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="MV3-Z8-42v">
-            <objects>
-                <viewController id="gvm-UU-PeH" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QfI-QU-3nq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ui-d3-Cgp">
-                                <rect key="frame" x="0.0" y="0.0" width="369" height="44"/>
-                                <items>
-                                    <navigationItem title="設定" id="nVb-Gm-UyI">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="4h4-lH-gu2">
-                                            <connections>
-                                                <segue destination="kN2-2B-2B9" kind="show" id="eK3-ZJ-i5q"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySw-8a-BtZ" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
-                                <rect key="frame" x="58" y="102" width="258" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="z6v-L1-GgC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="パスワード変更">
-                                    <color key="titleColor" systemColor="systemGrayColor"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" systemColor="systemGrayColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7j-aS-G7c" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
-                                <rect key="frame" x="58" y="161" width="258" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="XHn-u4-Cmi"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="ユーザID変更">
-                                    <color key="titleColor" systemColor="systemGrayColor"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" systemColor="systemGrayColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="SrR-ho-OPO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="ySw-8a-BtZ" firstAttribute="leading" secondItem="SrR-ho-OPO" secondAttribute="leading" constant="58" id="GjA-E5-KcJ"/>
-                            <constraint firstItem="ySw-8a-BtZ" firstAttribute="centerX" secondItem="QfI-QU-3nq" secondAttribute="centerX" id="Gxg-B8-aKK"/>
-                            <constraint firstItem="ySw-8a-BtZ" firstAttribute="trailing" secondItem="j7j-aS-G7c" secondAttribute="trailing" id="HVS-MI-rDK"/>
-                            <constraint firstItem="SrR-ho-OPO" firstAttribute="bottom" secondItem="j7j-aS-G7c" secondAttribute="bottom" constant="452" id="KXG-Yz-kab"/>
-                            <constraint firstItem="j7j-aS-G7c" firstAttribute="top" secondItem="ySw-8a-BtZ" secondAttribute="bottom" constant="25" id="OXv-Fs-faX"/>
-                            <constraint firstItem="ySw-8a-BtZ" firstAttribute="top" secondItem="8ui-d3-Cgp" secondAttribute="bottom" constant="58" id="S5J-gz-rO6"/>
-                            <constraint firstItem="8ui-d3-Cgp" firstAttribute="top" secondItem="SrR-ho-OPO" secondAttribute="top" id="ceY-mu-2Qh"/>
-                            <constraint firstItem="SrR-ho-OPO" firstAttribute="trailing" secondItem="8ui-d3-Cgp" secondAttribute="trailing" constant="6" id="gfZ-Jp-kNG"/>
-                            <constraint firstItem="8ui-d3-Cgp" firstAttribute="leading" secondItem="SrR-ho-OPO" secondAttribute="leading" id="n3Z-hh-LuU"/>
-                            <constraint firstItem="ySw-8a-BtZ" firstAttribute="leading" secondItem="j7j-aS-G7c" secondAttribute="leading" id="uQX-Mi-hoX"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="Vb9-ap-rpr"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9nc-b6-4iQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7118" y="793"/>
+            <point key="canvasLocation" x="6825" y="125"/>
         </scene>
         <!--Artwork List View Controller-->
         <scene sceneID="rVJ-xH-mrJ">
@@ -1708,9 +1587,6 @@
         <designable name="dwV-gx-K3w">
             <size key="intrinsicContentSize" width="92" height="34"/>
         </designable>
-        <designable name="j7j-aS-G7c">
-            <size key="intrinsicContentSize" width="109" height="34"/>
-        </designable>
         <designable name="jcy-Gg-Pgx">
             <size key="intrinsicContentSize" width="31" height="30"/>
         </designable>
@@ -1744,22 +1620,19 @@
         <designable name="ul2-0A-Zui">
             <size key="intrinsicContentSize" width="111" height="34"/>
         </designable>
-        <designable name="ySw-8a-BtZ">
-            <size key="intrinsicContentSize" width="129" height="34"/>
-        </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="hPO-VE-Ujs"/>
+        <segue reference="QtE-I1-LT7"/>
         <segue reference="N9B-LB-PUH"/>
         <segue reference="LeT-KA-c01"/>
         <segue reference="XR0-PB-GKN"/>
         <segue reference="Rfk-hI-CR0"/>
-        <segue reference="rll-ES-sJl"/>
+        <segue reference="XKx-za-cZi"/>
         <segue reference="CPV-8n-Ei2"/>
         <segue reference="cd6-8p-Gvp"/>
         <segue reference="9na-Af-XGj"/>
         <segue reference="LkH-jH-fFx"/>
-        <segue reference="mPc-ZS-E4t"/>
+        <segue reference="t36-nO-Lwn"/>
         <segue reference="Gur-xY-ndx"/>
     </inferredMetricsTieBreakers>
     <resources>
