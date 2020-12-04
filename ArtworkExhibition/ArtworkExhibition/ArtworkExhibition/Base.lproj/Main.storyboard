@@ -87,7 +87,7 @@
                                 <rect key="frame" x="133" y="597" width="108" height="30"/>
                                 <state key="normal" title="ログイン画面へ"/>
                                 <connections>
-                                    <segue destination="4B1-ti-utM" kind="show" id="qyT-k5-ZgW"/>
+                                    <segue destination="4B1-ti-utM" kind="show" id="Gur-xY-ndx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -301,7 +301,7 @@
                                     <constraint firstAttribute="height" constant="45" id="U9w-oR-gpw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="ログインする">
+                                <state key="normal" title="ログインへ">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -379,7 +379,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="be3-OR-MOh"/>
                                 </constraints>
-                                <state key="normal" title="ログインする">
+                                <state key="normal" title="ログイン">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -395,7 +395,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didTapSignInButton" destination="4B1-ti-utM" eventType="touchUpInside" id="avN-NG-Mbm"/>
-                                    <segue destination="OiN-bg-b3y" kind="presentation" identifier="goSignIn" id="ghG-J4-O22"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uTO-eM-8Vf">
@@ -444,6 +443,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="uTO-eM-8Vf" id="FRO-yl-yO8"/>
                         <outlet property="passwordTextField" destination="KZY-Ra-t3q" id="2mt-fG-i29"/>
+                        <segue destination="OiN-bg-b3y" kind="presentation" identifier="goSignIn" id="Fs3-yg-mk4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGB-dp-nSG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -499,6 +499,7 @@
                             <constraint firstItem="TGb-sa-7vR" firstAttribute="centerX" secondItem="hu6-vD-cg8" secondAttribute="centerX" id="l2n-xe-EEH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="AWm-FP-B55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVN-jX-68A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1700,7 +1701,7 @@
             <size key="intrinsicContentSize" width="123" height="30"/>
         </designable>
         <designable name="dv3-PQ-vdg">
-            <size key="intrinsicContentSize" width="92" height="30"/>
+            <size key="intrinsicContentSize" width="62" height="30"/>
         </designable>
         <designable name="dwV-gx-K3w">
             <size key="intrinsicContentSize" width="92" height="34"/>
@@ -1715,7 +1716,7 @@
             <size key="intrinsicContentSize" width="37" height="34"/>
         </designable>
         <designable name="n1l-fm-uEn">
-            <size key="intrinsicContentSize" width="111" height="34"/>
+            <size key="intrinsicContentSize" width="92" height="34"/>
         </designable>
         <designable name="n1s-cr-KcV">
             <size key="intrinsicContentSize" width="111" height="34"/>
@@ -1746,7 +1747,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="vSN-nG-fV1"/>
+        <segue reference="hPO-VE-Ujs"/>
         <segue reference="N9B-LB-PUH"/>
         <segue reference="LeT-KA-c01"/>
         <segue reference="XR0-PB-GKN"/>
@@ -1757,7 +1758,7 @@
         <segue reference="9na-Af-XGj"/>
         <segue reference="LkH-jH-fFx"/>
         <segue reference="mPc-ZS-E4t"/>
-        <segue reference="Itz-vr-8Rd"/>
+        <segue reference="Gur-xY-ndx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="explanation" width="555" height="917"/>

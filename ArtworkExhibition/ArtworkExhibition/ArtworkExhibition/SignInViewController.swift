@@ -33,32 +33,41 @@ class SignInViewController: UIViewController {
         //サインインを行う
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
             guard let self = self else { return }
-            if (result?.user) != nil {
+            if let user = result?.user{
                 print("サインイン")
                 //現在のユーザを取得 - currentUser
-                let user = Auth.auth().currentUser
-                if let user = user {
+                let c_user = Auth.auth().currentUser
+                if let current_user = c_user {
                     //let uid = user.uid
-                    let email = user.email
-                    let usename = user.displayName
+                    let email = current_user.email
+                    let usename = current_user.displayName
                     //print(uid)
                     print(email!)
                     print(usename!)
                 }
+                print ("画面遷移へ")
                 // サインイン後の画面へ (セグエ指定画面遷移)
                 self.performSegue(withIdentifier: "goSignIn", sender: nil)
+            } else {
+                print("エラー処理へ")
+                self.showErrorIfNeeded(error)
             }
-            self.showErrorIfNeeded(error)
         }
     }
     
     //エラー処理
     private func showErrorIfNeeded(_ errorOrNil: Error?) {
         // エラーがなければ何もしない
-        guard let error = errorOrNil else { return }
+        guard let error = errorOrNil else {
+            print("エラー無し")
+            return
+            
+        }
         
         let message = errorMessage(of: error) // エラーメッセージを取得
         print(message) //メッセージ取得ok
+        //alert処理
+        //UIAlertControllerのインスタンスを作る
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
