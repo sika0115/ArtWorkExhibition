@@ -683,7 +683,7 @@
                                     <constraint firstAttribute="height" constant="44" id="mpm-6v-JcO"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="画像を追加" id="QHH-yo-abL">
+                                    <navigationItem title="作品を追加" id="QHH-yo-abL">
                                         <barButtonItem key="leftBarButtonItem" title="戻る" id="GYW-vE-fTe">
                                             <connections>
                                                 <segue destination="jiZ-6X-5sx" kind="show" id="9bQ-Gh-leX"/>
@@ -917,7 +917,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="in3-hD-0n2"/>
                                 </constraints>
-                                <state key="normal" title="作品の説明を追加"/>
+                                <state key="normal" title="作品の説明を追加">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                         <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1047,13 +1049,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="サムネイル画像を追加" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cy4-P9-Sqn">
-                                <rect key="frame" x="101" y="57" width="174" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIy-F3-z2x" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="114" y="395" width="147" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1107,6 +1102,19 @@
                                 <rect key="frame" x="51" y="179" width="275" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TIh-jn-kWt">
+                                <rect key="frame" x="1" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="サムネイル画像を追加" id="prT-im-fRv">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="mdq-eK-EIV">
+                                            <connections>
+                                                <segue destination="aeu-1j-Ar0" kind="show" id="MtJ-W0-c6g"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VKM-2q-Z7W"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1593,14 +1601,15 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="QtE-I1-LT7"/>
+        <segue reference="DmY-ge-3HO"/>
         <segue reference="N9B-LB-PUH"/>
         <segue reference="WSs-sP-sHy"/>
         <segue reference="XR0-PB-GKN"/>
+        <segue reference="MtJ-W0-c6g"/>
         <segue reference="Rfk-hI-CR0"/>
-        <segue reference="XKx-za-cZi"/>
+        <segue reference="rll-ES-sJl"/>
         <segue reference="CPV-8n-Ei2"/>
-        <segue reference="HTQ-Ro-5cF"/>
+        <segue reference="cd6-8p-Gvp"/>
         <segue reference="9na-Af-XGj"/>
         <segue reference="9bQ-Gh-leX"/>
         <segue reference="t36-nO-Lwn"/>
