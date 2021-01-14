@@ -247,9 +247,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pf6-PJ-G7q" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pf6-PJ-G7q" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="150" y="468" width="75" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="1Wl-fQ-t9G"/>
+                                </constraints>
                                 <state key="normal" title="次へ">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -272,9 +274,12 @@
                         <viewLayoutGuide key="safeArea" id="LTT-QX-6Cj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="wDS-4O-QvS" firstAttribute="centerX" secondItem="H9b-rO-VJe" secondAttribute="centerX" id="2LZ-4p-XZE"/>
-                            <constraint firstItem="wDS-4O-QvS" firstAttribute="top" secondItem="LTT-QX-6Cj" secondAttribute="top" constant="270" id="3rm-Hr-gD0"/>
-                            <constraint firstItem="wDS-4O-QvS" firstAttribute="leading" secondItem="LTT-QX-6Cj" secondAttribute="leading" constant="83" id="xZG-ZH-FtV"/>
+                            <constraint firstItem="wDS-4O-QvS" firstAttribute="centerX" secondItem="pf6-PJ-G7q" secondAttribute="centerX" id="5MD-Fd-z78"/>
+                            <constraint firstItem="pf6-PJ-G7q" firstAttribute="leading" secondItem="LTT-QX-6Cj" secondAttribute="leading" constant="150" id="E77-5J-95D"/>
+                            <constraint firstItem="wDS-4O-QvS" firstAttribute="leading" secondItem="LTT-QX-6Cj" secondAttribute="leading" constant="83" id="Fr3-cB-c59"/>
+                            <constraint firstItem="wDS-4O-QvS" firstAttribute="centerX" secondItem="H9b-rO-VJe" secondAttribute="centerX" id="fh1-HZ-SMK"/>
+                            <constraint firstItem="LTT-QX-6Cj" firstAttribute="bottom" secondItem="pf6-PJ-G7q" secondAttribute="bottom" constant="133" id="fzt-O8-jwp"/>
+                            <constraint firstItem="wDS-4O-QvS" firstAttribute="top" secondItem="LTT-QX-6Cj" secondAttribute="top" constant="270" id="qNF-Ak-rTy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EZ0-sj-eyd"/>
@@ -515,20 +520,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDZ-Oz-5hh">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EDZ-Oz-5hh">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Mi9-v8-FYN"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="ホーム" id="crN-tw-G8x"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y06-cO-jvw" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y06-cO-jvw" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="16" y="106" width="343" height="68"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="68" id="gyK-Rp-Ksz"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="展示作成">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -548,11 +549,9 @@
                                     <segue destination="jiZ-6X-5sx" kind="show" id="LkH-jH-fFx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PG8-oB-YRt" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PG8-oB-YRt" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
                                 <rect key="frame" x="16" y="215" width="343" height="69"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="69" id="eck-qP-DVc"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="展示を見る">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -572,13 +571,17 @@
                                     <segue destination="Lph-jn-fwt" kind="show" id="WSs-sP-sHy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rX6-Xm-yFj" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
-                                <rect key="frame" x="16" y="329" width="343" height="76"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkD-Dv-vyT" customClass="CustomButton" customModule="ArtworkExhibition" customModuleProvider="target">
+                                <rect key="frame" x="16" y="324" width="343" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="マイページ">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
@@ -590,27 +593,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="kN2-2B-2B9" kind="show" id="XR0-PB-GKN"/>
+                                    <segue destination="kN2-2B-2B9" kind="show" id="HwO-eb-3yt"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AD7-TS-yFa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="EDZ-Oz-5hh" firstAttribute="leading" secondItem="AD7-TS-yFa" secondAttribute="leading" id="0gX-9r-NOa"/>
-                            <constraint firstItem="AD7-TS-yFa" firstAttribute="bottom" secondItem="rX6-Xm-yFj" secondAttribute="bottom" constant="242" id="EAv-Ac-Oq1"/>
-                            <constraint firstItem="EDZ-Oz-5hh" firstAttribute="centerX" secondItem="Y06-cO-jvw" secondAttribute="centerX" id="HEs-Te-fCK"/>
-                            <constraint firstItem="EDZ-Oz-5hh" firstAttribute="top" secondItem="AD7-TS-yFa" secondAttribute="top" id="IlR-aS-qSC"/>
-                            <constraint firstItem="Y06-cO-jvw" firstAttribute="trailing" secondItem="PG8-oB-YRt" secondAttribute="trailing" id="J0x-Ju-N5M"/>
-                            <constraint firstItem="rX6-Xm-yFj" firstAttribute="top" secondItem="PG8-oB-YRt" secondAttribute="bottom" constant="45" id="LQV-a3-C0T"/>
-                            <constraint firstItem="PG8-oB-YRt" firstAttribute="leading" secondItem="rX6-Xm-yFj" secondAttribute="leading" id="QRy-rZ-9kf"/>
-                            <constraint firstItem="Y06-cO-jvw" firstAttribute="top" secondItem="EDZ-Oz-5hh" secondAttribute="bottom" constant="62" id="TkO-Gc-Bbg"/>
-                            <constraint firstItem="PG8-oB-YRt" firstAttribute="top" secondItem="Y06-cO-jvw" secondAttribute="bottom" constant="41" id="YNC-ue-p0d"/>
-                            <constraint firstItem="PG8-oB-YRt" firstAttribute="trailing" secondItem="rX6-Xm-yFj" secondAttribute="trailing" id="mFt-YS-DOF"/>
-                            <constraint firstItem="Y06-cO-jvw" firstAttribute="trailing" secondItem="0MU-P2-ggJ" secondAttribute="trailingMargin" id="uAq-8R-9Nk"/>
-                            <constraint firstItem="Y06-cO-jvw" firstAttribute="leading" secondItem="0MU-P2-ggJ" secondAttribute="leadingMargin" id="vna-dh-Oi1"/>
-                            <constraint firstItem="Y06-cO-jvw" firstAttribute="leading" secondItem="PG8-oB-YRt" secondAttribute="leading" id="wRl-Aw-1yp"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="ホーム" image="house" catalog="system" id="vJk-Ec-7cj"/>
                     <navigationItem key="navigationItem" id="ULc-G1-Yre"/>
@@ -1553,6 +1541,9 @@
         <designable name="Arm-Yo-FBy">
             <size key="intrinsicContentSize" width="166" height="34"/>
         </designable>
+        <designable name="EkD-Dv-vyT">
+            <size key="intrinsicContentSize" width="127" height="42"/>
+        </designable>
         <designable name="PG8-oB-YRt">
             <size key="intrinsicContentSize" width="127" height="42"/>
         </designable>
@@ -1589,9 +1580,6 @@
         <designable name="rIy-F3-z2x">
             <size key="intrinsicContentSize" width="77" height="30"/>
         </designable>
-        <designable name="rX6-Xm-yFj">
-            <size key="intrinsicContentSize" width="127" height="42"/>
-        </designable>
         <designable name="sZI-5A-nCw">
             <size key="intrinsicContentSize" width="30" height="30"/>
         </designable>
@@ -1604,16 +1592,16 @@
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="vSN-nG-fV1"/>
-        <segue reference="N9B-LB-PUH"/>
+        <segue reference="17N-ds-lTj"/>
         <segue reference="WSs-sP-sHy"/>
-        <segue reference="XR0-PB-GKN"/>
+        <segue reference="HwO-eb-3yt"/>
         <segue reference="MtJ-W0-c6g"/>
         <segue reference="Rfk-hI-CR0"/>
         <segue reference="rll-ES-sJl"/>
         <segue reference="CPV-8n-Ei2"/>
         <segue reference="cd6-8p-Gvp"/>
-        <segue reference="9na-Af-XGj"/>
-        <segue reference="9bQ-Gh-leX"/>
+        <segue reference="X1w-3w-caB"/>
+        <segue reference="LkH-jH-fFx"/>
         <segue reference="t36-nO-Lwn"/>
         <segue reference="Gur-xY-ndx"/>
     </inferredMetricsTieBreakers>
