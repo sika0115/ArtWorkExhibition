@@ -40,17 +40,4 @@ class ImageDescriptionViewController: UIViewController, UITextFieldDelegate{
         let data: [String: Any] = ["artwork01desc":FieldValue.arrayUnion([textFieldString])] //更新用データ
         db.collection("artworks").document("artwork01").setData(data, merge: true)
     }
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

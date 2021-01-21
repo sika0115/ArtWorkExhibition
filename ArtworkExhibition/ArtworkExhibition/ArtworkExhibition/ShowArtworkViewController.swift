@@ -64,8 +64,8 @@ class ShowArtworkViewController: UIViewController {
                     
                     //ScrollViewの設定
                     let scrollView = UIScrollView()
-                    scrollView.frame = CGRect(x: 0.0, y: 60.0, width: UIScreen.main.bounds.width, height:300 /*UIScreen.main.bounds.height*/)
-                    //CGFloat → floatにキャストしないとだめ
+                    scrollView.frame = CGRect(x: 0.0, y: 60.0, width: UIScreen.main.bounds.width, height:300)
+                    //CGFloat → floatにキャストする必要あり
                     scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width * CGFloat(artworkImages.count), height: 300/*UIScreen.main.bounds.height*/) //contentSizeをframeより大きく画像の枚数分だけ倍に設定
                     scrollView.isPagingEnabled = true //isPagingEnabledオプションをtrueに設定(慣性流れ防止)
                     
@@ -165,16 +165,13 @@ class ShowArtworkViewController: UIViewController {
                         if i >= Int(artworkImages.count){
                             break
                         }
-                        
                     }
                     // スクロールビューを追加
                     self.view.addSubview(scrollView)
                     
-                    
                 }else{
                     print("Document does not exist")
                 }
-            
         }
         //button1押下時に関数button1Tappedを呼び出す
         button1.addTarget(self, action: #selector(button1Tapped), for: .touchUpInside)
@@ -197,7 +194,6 @@ class ShowArtworkViewController: UIViewController {
         //selectorで呼び出す場合Swift4からは「@objc」をつける
         self.performSegue(withIdentifier: "toArtworkDataView", sender: nil)
         print("buttonTapped called") //呼び出し成功
-        
     }
     
     @objc func button2Tapped(_ sender: UIButton) {
@@ -259,19 +255,7 @@ class ShowArtworkViewController: UIViewController {
             print("ok")
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
-
 
 extension UIImage {
     public convenience init(url: String) {

@@ -56,30 +56,4 @@ class ArtworkListViewController: UIViewController {
     @IBAction func seeArtwork(_ sender: Any) {
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
-
-/*extension UIImage {
-    public convenience init(url: String) {
-        let url = URL(string: url)
-        do {
-            let data = try Data(contentsOf: url!)
-            self.init(data: data)!
-            return
-        } catch let err {
-            print("Error : \(err.localizedDescription)")
-        }
-        self.init()
-    }
-}
-*/

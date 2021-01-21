@@ -68,7 +68,7 @@ class SignUpViewController: UIViewController {
         // エラーがなければ何もしない
         guard errorOrNil != nil else { return }
         
-        let message = "エラーが起きました" // ここは後述しますが、とりあえず固定文字列
+        let message = "エラーが起きました"
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
